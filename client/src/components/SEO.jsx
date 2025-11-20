@@ -7,8 +7,11 @@ const SEO = ({ title, description, image, url, type = 'website' }) => {
     const siteTitle = 'Biopotions';
     const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
     const metaDescription = description || 'Discover natural remedies for common ailments. Search by body part and save your favorite remedies.';
-    const metaImage = image || 'https://biopotions.netlify.app/logo.png'; // Fallback to logo or a specific OG image
-    const metaUrl = url || 'https://biopotions.netlify.app';
+
+    // Use absolute URL for Open Graph image (required for social media)
+    const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://biopotions.netlify.app';
+    const metaImage = image || `${baseUrl}/og-image.png`;
+    const metaUrl = url || baseUrl;
 
     return (
         <Helmet>
