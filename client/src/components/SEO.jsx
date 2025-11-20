@@ -26,13 +26,17 @@ const SEO = ({ title, description, image, url, type = 'website' }) => {
             <meta property="og:title" content={fullTitle} />
             <meta property="og:description" content={metaDescription} />
             <meta property="og:image" content={metaImage} />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:image:alt" content={fullTitle} />
 
             {/* Twitter */}
-            <meta property="twitter:card" content="summary_large_image" />
-            <meta property="twitter:url" content={metaUrl} />
-            <meta property="twitter:title" content={fullTitle} />
-            <meta property="twitter:description" content={metaDescription} />
-            <meta property="twitter:image" content={metaImage} />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:url" content={metaUrl} />
+            <meta name="twitter:title" content={fullTitle} />
+            <meta name="twitter:description" content={metaDescription} />
+            <meta name="twitter:image" content={metaImage} />
+            <meta name="twitter:image:alt" content={fullTitle} />
         </Helmet>
     );
 };
