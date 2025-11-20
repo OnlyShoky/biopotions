@@ -7,18 +7,17 @@ module.exports = {
         extend: {
             colors: {
                 pastel: {
-                    pink: '#FAD2E1',
-                    blue: '#C5E1A5', // Wait, C5E1A5 is green. Let's fix names.
-                    green: '#C5E1A5',
-                    blueLight: '#BCD4E6',
-                    yellow: '#FFF9C4',
-                    lavender: '#E1BEE7',
-                    cream: '#FDFBF7',
-                    text: '#4A4A4A',
+                    green: '#74C69D',      // Sage Green (Primary)
+                    mint: '#B7E4C7',       // Mint (Secondary)
+                    light: '#F0FFF4',      // Very light green/white (Background)
+                    dark: '#2D6A4F',       // Dark Forest Green (Text/Accents)
+                    cream: '#D8F3DC',      // Light Green/Cream
+                    text: '#1B4332',       // Deep Green Text
                 }
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
+                serif: ['Playfair Display', 'serif'],
             }
         },
     },
