@@ -6,6 +6,8 @@ import { bodyPartsData } from '../data';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
 
+import SEO from '../components/SEO';
+
 const Home = () => {
     const [bodyParts, setBodyParts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -22,6 +24,10 @@ const Home = () => {
 
     return (
         <div className="flex flex-col items-center">
+            <SEO
+                title={t.home}
+                description={t.hero_subtitle}
+            />
             <div className="text-center mb-12 max-w-2xl">
                 <h1 className="text-4xl md:text-5xl font-serif font-bold text-pastel-dark mb-4">
                     {t.hero_title_prefix} <span className="text-pastel-green">{t.hero_title_highlight}</span>

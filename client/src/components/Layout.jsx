@@ -9,7 +9,9 @@ const Layout = ({ children }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
     const { language, changeLanguage } = useLanguage();
-    const t = translations[language];
+    const t = translations[language] || translations['en']; // Fallback to English if translation is missing
+
+    if (!t) return null; // Prevent crash if everything fails
 
     return (
         <div className="min-h-screen bg-pastel-light font-sans text-pastel-text flex flex-col">
@@ -27,9 +29,9 @@ const Layout = ({ children }) => {
                         <Link to="/favorites" className={`flex items-center gap-2 hover:text-pastel-green transition-colors font-medium ${location.pathname === '/favorites' ? 'text-pastel-green' : ''}`}>
                             <Heart size={18} /> {t.favorites}
                         </Link>
-                        <button className="hover:text-pastel-green transition-colors font-medium flex items-center gap-2">
+                        <Link to="/about" className={`hover:text-pastel-green transition-colors font-medium flex items-center gap-2 ${location.pathname === '/about' ? 'text-pastel-green' : ''}`}>
                             <Info size={18} /> {t.about}
-                        </button>
+                        </Link>
 
                         {/* Language Switcher */}
                         <div className="flex items-center gap-2 ml-4 border-l border-pastel-mint/30 pl-4">
@@ -59,9 +61,9 @@ const Layout = ({ children }) => {
                         <Link to="/favorites" className="py-2 hover:text-pastel-green flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
                             <Heart size={18} /> {t.favorites}
                         </Link>
-                        <button className="py-2 hover:text-pastel-green flex items-center gap-2 text-left" onClick={() => setIsMenuOpen(false)}>
+                        <Link to="/about" className="py-2 hover:text-pastel-green flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
                             <Info size={18} /> {t.about}
-                        </button>
+                        </Link>
                         <div className="py-2 flex items-center gap-2 border-t border-pastel-mint/10 mt-2 pt-4">
                             <Globe size={18} className="text-pastel-mint" />
                             <select

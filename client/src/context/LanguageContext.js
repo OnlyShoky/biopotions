@@ -9,8 +9,13 @@ export const LanguageProvider = ({ children }) => {
 
     useEffect(() => {
         const storedLang = localStorage.getItem('biopotions_language');
-        if (storedLang) {
+        const supportedLanguages = ['en', 'es', 'fr'];
+        if (storedLang && supportedLanguages.includes(storedLang)) {
             setLanguage(storedLang);
+        } else {
+            // If invalid or missing, default to 'en' and clean up
+            setLanguage('en');
+            localStorage.setItem('biopotions_language', 'en');
         }
     }, []);
 

@@ -5,6 +5,7 @@ import RemedyDetail from '../components/RemedyDetail';
 import { bodyPartsData } from '../data';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
+import SEO from '../components/SEO';
 
 const AilmentDetails = () => {
     const { name } = useParams();
@@ -84,6 +85,10 @@ const AilmentDetails = () => {
 
     return (
         <div className="max-w-4xl mx-auto">
+            <SEO
+                title={`${ailment.name[language]} - ${t.app_name}`}
+                description={`Natural remedies for ${ailment.name[language]}.`}
+            />
             <Link to={`/bodypart/${bodyPart.bodyPart.en}`} className="inline-flex items-center text-pastel-text/60 hover:text-pastel-green mb-6 transition-colors">
                 <ArrowLeft size={20} className="mr-2" /> {t.back}
             </Link>

@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import BodyPartDetails from './pages/BodyPartDetails';
 import AilmentDetails from './pages/AilmentDetails';
 import Favorites from './pages/Favorites';
+import About from './pages/About';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     <Route path="/bodypart/:name" element={<BodyPartDetails />} />
                     <Route path="/ailment/:name" element={<AilmentDetails />} />
                     <Route path="/favorites" element={<Favorites />} />
+                    <Route path="/about" element={<About />} />
                 </Routes>
             </Layout>
         </Router>

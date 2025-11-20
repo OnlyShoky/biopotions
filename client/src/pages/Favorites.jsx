@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Trash2, ArrowRight } from 'lucide-react';
+import { Heart, Trash2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
+import SEO from '../components/SEO';
 
 const Favorites = () => {
     const [favorites, setFavorites] = useState([]);
@@ -34,6 +35,10 @@ const Favorites = () => {
 
     return (
         <div className="max-w-4xl mx-auto">
+            <SEO
+                title={t.favorites}
+                description="Your saved natural remedies."
+            />
             <h1 className="text-4xl font-serif font-bold text-pastel-dark mb-8 flex items-center gap-3">
                 <Heart className="text-pastel-green fill-pastel-green" size={32} />
                 {t.saved_remedies}

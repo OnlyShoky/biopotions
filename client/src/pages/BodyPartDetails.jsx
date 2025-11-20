@@ -6,6 +6,8 @@ import { bodyPartsData } from '../data';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
 
+import SEO from '../components/SEO';
+
 const BodyPartDetails = () => {
     const { name } = useParams();
     const [bodyPart, setBodyPart] = useState(null);
@@ -38,6 +40,11 @@ const BodyPartDetails = () => {
 
     return (
         <div className="max-w-4xl mx-auto">
+            <SEO
+                title={`${bodyPart.bodyPart[language]} - ${t.app_name}`}
+                description={`Natural remedies for ${bodyPart.bodyPart[language]} ailments.`}
+                image={bodyPart.image}
+            />
             <Link to="/" className="inline-flex items-center text-pastel-text/60 hover:text-pastel-green mb-6 transition-colors">
                 <ArrowLeft size={20} className="mr-2" /> {t.back}
             </Link>
