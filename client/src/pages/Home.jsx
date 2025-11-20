@@ -3,10 +3,14 @@ import SearchBar from '../components/SearchBar';
 import BodyPartCard from '../components/BodyPartCard';
 import { motion } from 'framer-motion';
 import { bodyPartsData } from '../data';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../utils/translations';
 
 const Home = () => {
     const [bodyParts, setBodyParts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const { language } = useLanguage();
+    const t = translations[language];
 
     useEffect(() => {
         // Simulate loading for a smoother feel
@@ -20,10 +24,10 @@ const Home = () => {
         <div className="flex flex-col items-center">
             <div className="text-center mb-12 max-w-2xl">
                 <h1 className="text-4xl md:text-5xl font-serif font-bold text-pastel-dark mb-4">
-                    Natural Remedies for <span className="text-pastel-green">Everyday Ailments</span>
+                    {t.hero_title_prefix} <span className="text-pastel-green">{t.hero_title_highlight}</span>
                 </h1>
                 <p className="text-pastel-text text-lg opacity-80">
-                    Find gentle, effective home remedies curated for your well-being.
+                    {t.hero_subtitle}
                 </p>
             </div>
 
@@ -41,7 +45,7 @@ const Home = () => {
                     className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full max-w-5xl"
                 >
                     {bodyParts.map((bp) => (
-                        <BodyPartCard key={bp._id} name={bp.bodyPart} image={bp.image} />
+                        <BodyPartCard key={bp._id} name={bp.bodyPart[language]} image={bp.image} originalName={bp.bodyPart.en} />
                     ))}
                 </motion.div>
             )}

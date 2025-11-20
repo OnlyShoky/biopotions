@@ -2,12 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { bodyPartsData } from '../data';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../utils/translations';
 
 const SearchBar = () => {
     const [query, setQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
     const navigate = useNavigate();
+    const { language } = useLanguage();
+    const t = translations[language];
 
     useEffect(() => {
         const fetchSuggestions = async () => {
@@ -19,12 +23,13 @@ const SearchBar = () => {
             // Filter local data
             let matches = [];
             bodyPartsData.forEach(bp => {
-                if (bp.bodyPart.toLowerCase().includes(query.toLowerCase())) {
-                    matches.push({ type: 'Body Part', name: bp.bodyPart, link: `/bodypart/${bp.bodyPart}` });
+                // Search in the current language
+                if (bp.bodyPart[language].toLowerCase().includes(query.toLowerCase())) {
+                    matches.push({ type: 'Body Part', name: bp.bodyPart[language], link: `/bodypart/${bp.bodyPart.en}` });
                 }
                 bp.ailments.forEach(a => {
-                    if (a.name.toLowerCase().includes(query.toLowerCase())) {
-                        matches.push({ type: 'Ailment', name: a.name, link: `/ailment/${a.name}` });
+                    if (a.name[language].toLowerCase().includes(query.toLowerCase())) {
+                        matches.push({ type: 'Ailment', name: a.name[language], link: `/ailment/${a.name.en}` });
                     }
                 });
             });
@@ -36,7 +41,7 @@ const SearchBar = () => {
         }, 300);
 
         return () => clearTimeout(timeoutId);
-    }, [query]);
+    }, [query, language]);
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -51,7 +56,7 @@ const SearchBar = () => {
             <form onSubmit={handleSearch} className="relative">
                 <input
                     type="text"
-                    placeholder="Search for a body part or ailment..."
+                    placeholder={t.search_placeholder}
                     className="w-full px-6 py-4 pl-12 rounded-full border-2 border-pastel-mint/50 focus:border-pastel-green focus:outline-none shadow-sm text-lg bg-white/80 backdrop-blur-sm transition-all text-pastel-text placeholder-pastel-text/50"
                     value={query}
                     onChange={(e) => {

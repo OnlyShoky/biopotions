@@ -1,44 +1,59 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import AilmentList from '../components/AilmentList';
 import { ArrowLeft } from 'lucide-react';
+import AilmentList from '../components/AilmentList';
 import { bodyPartsData } from '../data';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../utils/translations';
 
 const BodyPartDetails = () => {
     const { name } = useParams();
     const [bodyPart, setBodyPart] = useState(null);
     const [loading, setLoading] = useState(true);
+    const { language } = useLanguage();
+    const t = translations[language];
 
     useEffect(() => {
-        // Simulate loading
+        // Simulate API call
         setTimeout(() => {
-            const found = bodyPartsData.find(bp => bp.bodyPart.toLowerCase() === name.toLowerCase());
+            // Find by English name (since URL uses English name)
+            const found = bodyPartsData.find(bp => bp.bodyPart.en === name);
             setBodyPart(found);
             setLoading(false);
         }, 300);
     }, [name]);
 
-    if (loading) return <div className="flex justify-center py-20"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-pastel-green"></div></div>;
+    if (loading) return (
+        <div className="flex justify-center py-20">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-pastel-green"></div>
+        </div>
+    );
 
-    if (!bodyPart) return <div className="text-center py-20 text-pastel-text">Body part not found</div>;
+    if (!bodyPart) return (
+        <div className="text-center py-20">
+            <h2 className="text-2xl font-serif text-pastel-dark mb-4">{t.body_part_not_found}</h2>
+            <Link to="/" className="text-pastel-green hover:underline">{t.back_to_home}</Link>
+        </div>
+    );
 
     return (
-        <div className="max-w-3xl mx-auto">
-            <Link to="/" className="inline-flex items-center text-pastel-text/60 hover:text-pastel-green mb-8 transition-colors">
-                <ArrowLeft size={20} className="mr-1" /> Back to Home
+        <div className="max-w-4xl mx-auto">
+            <Link to="/" className="inline-flex items-center text-pastel-text/60 hover:text-pastel-green mb-6 transition-colors">
+                <ArrowLeft size={20} className="mr-2" /> {t.back}
             </Link>
 
-            <div className="mb-10 text-center">
-                <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
-                    <img src={bodyPart.image} alt={bodyPart.bodyPart} className="w-full h-full object-contain" />
+            <div className="flex flex-col md:flex-row gap-8 items-start mb-12">
+                <div className="w-full md:w-1/3 aspect-square bg-white rounded-3xl p-8 border border-pastel-mint/30 shadow-sm flex items-center justify-center">
+                    <img src={bodyPart.image} alt={bodyPart.bodyPart[language]} className="w-full h-full object-contain" />
                 </div>
-                <h1 className="text-3xl font-serif font-bold text-pastel-dark">
-                    {bodyPart.bodyPart} Issues
-                </h1>
-                <p className="text-pastel-text opacity-80 mt-2">Select an ailment to find remedies</p>
-            </div>
 
-            <AilmentList ailments={bodyPart.ailments} />
+                <div className="flex-1">
+                    <h1 className="text-4xl md:text-5xl font-serif font-bold text-pastel-dark mb-4">{bodyPart.bodyPart[language]}</h1>
+                    <p className="text-lg text-pastel-text mb-8">{t.select_ailment}</p>
+
+                    <AilmentList ailments={bodyPart.ailments} />
+                </div>
+            </div>
         </div>
     );
 };
