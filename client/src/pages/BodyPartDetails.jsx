@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import AilmentList from '../components/AilmentList';
-import { bodyPartsData } from '../data';
+import useDataFetcher from '../hooks/useDataFetcher';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
 
@@ -10,20 +10,20 @@ import SEO from '../components/SEO';
 
 const BodyPartDetails = () => {
     const { name } = useParams();
+    const { data: bodyParts, loading: dataLoading } = useDataFetcher();
     const [bodyPart, setBodyPart] = useState(null);
     const [loading, setLoading] = useState(true);
     const { language } = useLanguage();
     const t = translations[language];
 
     useEffect(() => {
-        // Simulate API call
-        setTimeout(() => {
+        if (!dataLoading && bodyParts.length > 0) {
             // Find by English name (since URL uses English name)
-            const found = bodyPartsData.find(bp => bp.bodyPart.en === name);
+            const found = bodyParts.find(bp => bp.bodyPart.en === name);
             setBodyPart(found);
             setLoading(false);
-        }, 300);
-    }, [name]);
+        }
+    }, [name, bodyParts, dataLoading]);
 
     if (loading) return (
         <div className="flex justify-center py-20">

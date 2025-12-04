@@ -1,26 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import SearchBar from '../components/SearchBar';
 import BodyPartCard from '../components/BodyPartCard';
 import { motion } from 'framer-motion';
-import { bodyPartsData } from '../data';
+import useDataFetcher from '../hooks/useDataFetcher';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
 
 import SEO from '../components/SEO';
 
 const Home = () => {
-    const [bodyParts, setBodyParts] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const { data: bodyParts, isUsingBackend, loading } = useDataFetcher();
     const { language } = useLanguage();
     const t = translations[language];
-
-    useEffect(() => {
-        // Simulate loading for a smoother feel
-        setTimeout(() => {
-            setBodyParts(bodyPartsData);
-            setLoading(false);
-        }, 500);
-    }, []);
 
     return (
         <div className="flex flex-col items-center">
@@ -28,6 +19,12 @@ const Home = () => {
                 title={t.home}
                 description={t.hero_subtitle}
             />
+
+            {/* Data Source Indicator */}
+            <div className={`fixed top-4 right-4 z-50 px-4 py-2 rounded-full text-xs font-bold shadow-md ${isUsingBackend ? 'bg-green-100 text-green-800 border border-green-200' : 'bg-yellow-100 text-yellow-800 border border-yellow-200'}`}>
+                {isUsingBackend ? 'Using backend data' : 'Using local JSON fallback'}
+            </div>
+
             <div className="text-center mb-12 max-w-2xl">
                 <h1 className="text-4xl md:text-5xl font-serif font-bold text-pastel-dark mb-4">
                     {t.hero_title_prefix} <span className="text-pastel-green">{t.hero_title_highlight}</span>

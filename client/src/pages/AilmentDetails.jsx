@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import RemedyDetail from '../components/RemedyDetail';
-import { bodyPartsData } from '../data';
+import useDataFetcher from '../hooks/useDataFetcher';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
 import SEO from '../components/SEO';
 
 const AilmentDetails = () => {
     const { name } = useParams();
+    const { data: bodyParts, loading: dataLoading } = useDataFetcher();
     const [ailment, setAilment] = useState(null);
     const [bodyPart, setBodyPart] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -35,14 +36,13 @@ const AilmentDetails = () => {
             localStorage.removeItem('biopotions_favorites');
         }
 
-        // Simulate API call
-        setTimeout(() => {
+        if (!dataLoading && bodyParts.length > 0) {
             let foundAilment = null;
             let foundBodyPart = null;
 
             // Search through body parts to find the ailment by English name
-            for (const bp of bodyPartsData) {
-                const found = bp.ailments.find(a => a.name.en === name);
+            for (const bp of bodyParts) {
+                const found = bp.ailments?.find(a => a.name.en === name);
                 if (found) {
                     foundAilment = found;
                     foundBodyPart = bp;
@@ -53,8 +53,8 @@ const AilmentDetails = () => {
             setAilment(foundAilment);
             setBodyPart(foundBodyPart);
             setLoading(false);
-        }, 300);
-    }, [name]);
+        }
+    }, [name, bodyParts, dataLoading]);
 
     const toggleFavorite = (remedy) => {
         let newFavorites;

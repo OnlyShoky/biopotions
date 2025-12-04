@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
-const AilmentList = ({ ailments }) => {
+const AilmentList = ({ ailments = [] }) => {
     const { language } = useLanguage();
 
     return (

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { bodyPartsData } from '../data';
+import useDataFetcher from '../hooks/useDataFetcher';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
 
 const SearchBar = () => {
+    const { data: bodyParts } = useDataFetcher();
     const [query, setQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -20,14 +21,14 @@ const SearchBar = () => {
                 return;
             }
 
-            // Filter local data
+            // Filter data
             let matches = [];
-            bodyPartsData.forEach(bp => {
+            bodyParts.forEach(bp => {
                 // Search in the current language
                 if (bp.bodyPart[language].toLowerCase().includes(query.toLowerCase())) {
                     matches.push({ type: 'Body Part', name: bp.bodyPart[language], link: `/bodypart/${bp.bodyPart.en}` });
                 }
-                bp.ailments.forEach(a => {
+                bp.ailments?.forEach(a => {
                     if (a.name[language].toLowerCase().includes(query.toLowerCase())) {
                         matches.push({ type: 'Ailment', name: a.name[language], link: `/ailment/${a.name.en}` });
                     }
@@ -41,7 +42,7 @@ const SearchBar = () => {
         }, 300);
 
         return () => clearTimeout(timeoutId);
-    }, [query, language]);
+    }, [query, language, bodyParts]);
 
     const handleSearch = (e) => {
         e.preventDefault();
