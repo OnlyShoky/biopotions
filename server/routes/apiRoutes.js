@@ -18,7 +18,14 @@ router.get('/bodyparts', async (req, res) => {
 // @desc    Get specific body part with ailments
 router.get('/bodyparts/:name', async (req, res) => {
     try {
-        const bodyPart = await BodyPart.findOne({ bodyPart: new RegExp('^' + req.params.name + '$', 'i') });
+        const regex = new RegExp('^' + req.params.name + '$', 'i');
+        const bodyPart = await BodyPart.findOne({
+            $or: [
+                { 'bodyPart.en': regex },
+                { 'bodyPart.es': regex },
+                { 'bodyPart.fr': regex }
+            ]
+        });
         if (!bodyPart) return res.status(404).json({ message: 'Body part not found' });
         res.json(bodyPart);
     } catch (err) {
@@ -31,11 +38,22 @@ router.get('/bodyparts/:name', async (req, res) => {
 // Note: Since ailments are embedded, we search across body parts
 router.get('/ailments/:name', async (req, res) => {
     try {
-        const bodyPart = await BodyPart.findOne({ 'ailments.name': new RegExp('^' + req.params.name + '$', 'i') });
+        const regex = new RegExp('^' + req.params.name + '$', 'i');
+        const bodyPart = await BodyPart.findOne({
+            $or: [
+                { 'ailments.name.en': regex },
+                { 'ailments.name.es': regex },
+                { 'ailments.name.fr': regex }
+            ]
+        });
 
         if (!bodyPart) return res.status(404).json({ message: 'Ailment not found' });
 
-        const ailment = bodyPart.ailments.find(a => a.name.toLowerCase() === req.params.name.toLowerCase());
+        const ailment = bodyPart.ailments.find(a =>
+            a.name.en.toLowerCase() === req.params.name.toLowerCase() ||
+            a.name.es.toLowerCase() === req.params.name.toLowerCase() ||
+            a.name.fr.toLowerCase() === req.params.name.toLowerCase()
+        );
         res.json(ailment);
     } catch (err) {
         res.status(500).json({ message: err.message });
