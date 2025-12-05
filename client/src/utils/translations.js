@@ -24,7 +24,17 @@ export const translations = {
         explore_remedies: "Explore Remedies",
         view_details: "View Details",
         remove_favorite: "Remove from favorites",
-        for: "For"
+        for: "For",
+        top_ingredients: "Top 30 Ingredients",
+        versatility_score: "Versatility Score",
+        safety_rating: "Safety Rating",
+        common_uses: "Common Uses",
+        filter_by_category: "Filter by Category",
+        sort_by: "Sort by",
+        all_categories: "All Categories",
+        name_asc: "Name (A-Z)",
+        versatility_desc: "Versatility (High-Low)",
+        safety_asc: "Safety (1-5)"
     },
     es: {
         app_name: "Biopotions",
@@ -51,7 +61,17 @@ export const translations = {
         explore_remedies: "Explorar Remedios",
         view_details: "Ver Detalles",
         remove_favorite: "Eliminar de favoritos",
-        for: "Para"
+        for: "Para",
+        top_ingredients: "Top 30 Ingredientes",
+        versatility_score: "Puntaje de Versatilidad",
+        safety_rating: "Calificación de Seguridad",
+        common_uses: "Usos Comunes",
+        filter_by_category: "Filtrar por Categoría",
+        sort_by: "Ordenar por",
+        all_categories: "Todas las Categorías",
+        name_asc: "Nombre (A-Z)",
+        versatility_desc: "Versatilidad (Alto-Bajo)",
+        safety_asc: "Seguridad (1-5)"
     },
     fr: {
         app_name: "Biopotions",
@@ -78,6 +98,16 @@ export const translations = {
         explore_remedies: "Explorer les Remèdes",
         view_details: "Voir les Détails",
         remove_favorite: "Retirer des favoris",
-        for: "Pour"
+        for: "Pour",
+        top_ingredients: "Top 30 Ingrédients",
+        versatility_score: "Score de Polyvalence",
+        safety_rating: "Note de Sécurité",
+        common_uses: "Usages Courants",
+        filter_by_category: "Filtrer par Catégorie",
+        sort_by: "Trier par",
+        all_categories: "Toutes Catégories",
+        name_asc: "Nom (A-Z)",
+        versatility_desc: "Polyvalence (Haut-Bas)",
+        safety_asc: "Sécurité (1-5)"
     }
 };

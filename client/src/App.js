@@ -8,12 +8,15 @@ import IngredientDetails from './pages/IngredientDetails';
 import Favorites from './pages/Favorites';
 import About from './pages/About';
 
+import TopIngredients from './pages/TopIngredients';
+
 function App() {
     return (
         <Router>
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/top-ingredients" element={<TopIngredients />} />
                     <Route path="/bodypart/:name" element={<BodyPartDetails />} />
                     <Route path="/ailment/:name" element={<AilmentDetails />} />
                     <Route path="/ingredient/:id" element={<IngredientDetails />} />

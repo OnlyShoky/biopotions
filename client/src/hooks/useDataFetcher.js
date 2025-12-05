@@ -5,6 +5,7 @@ import { ENABLE_BACKEND } from '../config';
 
 const useDataFetcher = () => {
     const [data, setData] = useState([]);
+    const [ingredients, setIngredients] = useState([]);
     const [isUsingBackend, setIsUsingBackend] = useState(false);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -29,6 +30,7 @@ const useDataFetcher = () => {
                 }));
 
                 setData(hydratedLocalData);
+                setIngredients(localIngredients);
                 setIsUsingBackend(false);
                 setLoading(false);
                 return;
@@ -36,30 +38,32 @@ const useDataFetcher = () => {
 
             try {
                 // Attempt to fetch from backend
-                // Assuming backend is running on localhost:5000 and proxy is set up or CORS is handled
-                // If no proxy, we might need full URL. Let's assume relative path for now and see if we need to adjust.
-                // Given standard MERN setup, often a proxy is used in package.json.
-                // If not, we'll try localhost:5000 directly.
-                const response = await fetch('http://localhost:5000/api/bodyparts');
+                const [bodyPartsResponse, ingredientsResponse] = await Promise.all([
+                    fetch('http://localhost:5000/api/bodyparts'),
+                    fetch('http://localhost:5000/api/ingredients')
+                ]);
 
-                if (!response.ok) {
+                if (!bodyPartsResponse.ok || !ingredientsResponse.ok) {
                     throw new Error('Backend response was not ok');
                 }
 
-                const result = await response.json();
+                const bodyPartsResult = await bodyPartsResponse.json();
+                const ingredientsResult = await ingredientsResponse.json();
 
                 // Hydrate with images since backend doesn't serve them yet
-                const hydratedData = result.map(item => ({
+                const hydratedData = bodyPartsResult.map(item => ({
                     ...item,
                     image: getBodyPartImage(item.bodyPart.en)
                 }));
 
                 setData(hydratedData);
+                setIngredients(ingredientsResult);
                 setIsUsingBackend(true);
             } catch (err) {
                 console.warn('Failed to fetch from backend, falling back to local data:', err);
                 // Fallback to local data
                 setData(localData);
+                setIngredients(localIngredients);
                 setIsUsingBackend(false);
                 setError(err);
             } finally {
@@ -70,7 +74,7 @@ const useDataFetcher = () => {
         fetchData();
     }, []);
 
-    return { data, isUsingBackend, loading, error };
+    return { data, ingredients, isUsingBackend, loading, error };
 };
 
 export default useDataFetcher;

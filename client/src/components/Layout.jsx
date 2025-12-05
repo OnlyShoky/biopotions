@@ -26,6 +26,7 @@ const Layout = ({ children }) => {
                     {/* Desktop Nav */}
                     <nav className="hidden md:flex items-center gap-8">
                         <Link to="/" className={`hover:text-pastel-green transition-colors font-medium ${location.pathname === '/' ? 'text-pastel-green' : ''}`}>{t.home}</Link>
+                        <Link to="/top-ingredients" className={`hover:text-pastel-green transition-colors font-medium ${location.pathname === '/top-ingredients' ? 'text-pastel-green' : ''}`}>{t.top_ingredients}</Link>
                         <Link to="/favorites" className={`flex items-center gap-2 hover:text-pastel-green transition-colors font-medium ${location.pathname === '/favorites' ? 'text-pastel-green' : ''}`}>
                             <Heart size={18} /> {t.favorites}
                         </Link>
@@ -58,6 +59,7 @@ const Layout = ({ children }) => {
                 {isMenuOpen && (
                     <div className="md:hidden bg-white border-t border-pastel-mint/30 px-4 py-4 flex flex-col gap-4 shadow-lg">
                         <Link to="/" className="py-2 hover:text-pastel-green" onClick={() => setIsMenuOpen(false)}>{t.home}</Link>
+                        <Link to="/top-ingredients" className="py-2 hover:text-pastel-green" onClick={() => setIsMenuOpen(false)}>{t.top_ingredients}</Link>
                         <Link to="/favorites" className="py-2 hover:text-pastel-green flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
                             <Heart size={18} /> {t.favorites}
                         </Link>
