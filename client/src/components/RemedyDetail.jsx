@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
@@ -29,6 +30,32 @@ const RemedyDetail = ({ remedy, onToggleFavorite, isFavorite }) => {
                     <h4 className="text-sm font-bold text-pastel-text/40 uppercase tracking-wider mb-1">{t.preparation}</h4>
                     <p className="text-pastel-text leading-relaxed">{remedy.preparation[language]}</p>
                 </div>
+
+                {/* Ingredients Section */}
+                {remedy.ingredients && remedy.ingredients.length > 0 && (
+                    <div>
+                        <h4 className="text-sm font-bold text-pastel-text/40 uppercase tracking-wider mb-2">Ingredients</h4>
+                        <div className="flex flex-wrap gap-2">
+                            {remedy.ingredients.map((ing, idx) => {
+                                const ingredientData = ing.ingredientId;
+                                // Handle case where ingredientId might be populated object or just ID (though we try to hydrate)
+                                const name = ingredientData.name ? ingredientData.name[language] : 'Unknown Ingredient';
+                                const id = ingredientData._id || ingredientData;
+
+                                return (
+                                    <Link
+                                        key={idx}
+                                        to={`/ingredient/${id}`}
+                                        className="inline-flex items-center px-3 py-1 rounded-full bg-pastel-green/10 text-pastel-green hover:bg-pastel-green/20 transition-colors text-sm font-medium"
+                                    >
+                                        {name}
+                                        {ing.quantity && <span className="ml-1 opacity-70 text-xs">({ing.quantity[language]})</span>}
+                                    </Link>
+                                );
+                            })}
+                        </div>
+                    </div>
+                )}
 
                 {remedy.warnings && (
                     <div className="bg-pastel-yellow/30 p-4 rounded-xl border border-pastel-yellow">

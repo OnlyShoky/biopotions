@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { bodyPartsData as localData } from '../data';
+import { bodyPartsData as localData, ingredientsData as localIngredients } from '../data';
 import { getBodyPartImage } from '../utils/imageMap';
 import { ENABLE_BACKEND } from '../config';
 
@@ -13,7 +13,22 @@ const useDataFetcher = () => {
         const fetchData = async () => {
             // If backend is disabled via config, use local data immediately
             if (!ENABLE_BACKEND) {
-                setData(localData);
+                // Hydrate local data with ingredient details
+                const hydratedLocalData = localData.map(bp => ({
+                    ...bp,
+                    ailments: bp.ailments.map(a => ({
+                        ...a,
+                        remedies: a.remedies.map(r => ({
+                            ...r,
+                            ingredients: r.ingredients?.map(i => ({
+                                ...i,
+                                ingredientId: localIngredients.find(ing => ing._id === i.ingredientId) || i.ingredientId
+                            }))
+                        }))
+                    }))
+                }));
+
+                setData(hydratedLocalData);
                 setIsUsingBackend(false);
                 setLoading(false);
                 return;

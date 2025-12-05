@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import BodyPartDetails from './pages/BodyPartDetails';
 import AilmentDetails from './pages/AilmentDetails';
+import IngredientDetails from './pages/IngredientDetails';
 import Favorites from './pages/Favorites';
 import About from './pages/About';
 
@@ -15,6 +16,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/bodypart/:name" element={<BodyPartDetails />} />
                     <Route path="/ailment/:name" element={<AilmentDetails />} />
+                    <Route path="/ingredient/:id" element={<IngredientDetails />} />
                     <Route path="/favorites" element={<Favorites />} />
                     <Route path="/about" element={<About />} />
                 </Routes>
