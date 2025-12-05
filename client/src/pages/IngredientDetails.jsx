@@ -69,20 +69,8 @@ const IngredientDetails = () => {
 
             <div className="bg-white rounded-3xl shadow-sm p-8 border border-pastel-green/10">
                 <div className="flex flex-col md:flex-row gap-8">
-                    {/* Image Section - Placeholder for now if no image */}
-                    <div className="w-full md:w-1/3">
-                        <div className="aspect-square rounded-2xl bg-pastel-cream flex items-center justify-center overflow-hidden">
-                            {/* Use a generic placeholder or the image if available */}
-                            {ingredient.image ? (
-                                <img src={ingredient.image} alt={ingredient.name[language]} className="w-full h-full object-cover" />
-                            ) : (
-                                <span className="text-4xl">🌿</span>
-                            )}
-                        </div>
-                    </div>
-
                     {/* Content Section */}
-                    <div className="w-full md:w-2/3">
+                    <div className="w-full">
                         <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-2 gap-2">
                             <h1 className="text-3xl font-serif font-bold text-pastel-dark">{ingredient.name[language]}</h1>
                             <span className="text-sm font-mono text-pastel-text/60 italic">{ingredient.scientificName}</span>

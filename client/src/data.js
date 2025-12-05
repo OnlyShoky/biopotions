@@ -8,22 +8,18 @@ import backImg from './assets/back.png';
 import legsImg from './assets/legs.png';
 
 // Ingredient Images
-import honeyImg from './assets/ingredients/honey.png';
-import lemonImg from './assets/ingredients/lemon.png';
-import saltImg from './assets/ingredients/salt.png';
-// Placeholders for others until generated
+// import honeyImg from './assets/ingredients/honey.png';
+// import lemonImg from './assets/ingredients/lemon.png';
+// import saltImg from './assets/ingredients/salt.png';
 // import peppermintImg from './assets/ingredients/peppermint.png';
 // import gingerImg from './assets/ingredients/ginger.png';
-// import chamomileImg from './assets/ingredients/chamomile.png';
-// import aloeImg from './assets/ingredients/aloe.png';
-// import thymeImg from './assets/ingredients/thyme.png';
 
 export const ingredientsData = [
     {
         _id: 'ing-honey',
         name: { en: 'Honey', es: 'Miel', fr: 'Miel' },
         scientificName: 'Apis mellifera',
-        image: honeyImg,
+        // image: honeyImg,
         description: {
             en: 'Natural sweetener with antibacterial and soothing properties',
             es: 'Endulzante natural con propiedades antibacterianas y suavizantes',
@@ -42,10 +38,10 @@ export const ingredientsData = [
         _id: 'ing-lemon',
         name: { en: 'Lemon', es: 'Limón', fr: 'Citron' },
         scientificName: 'Citrus limon',
-        image: lemonImg,
+        // image: lemonImg,
         description: {
             en: 'Rich in Vitamin C and antioxidants.',
-            es: 'Rico en Vitamina C y antioxidantes.',
+            es: 'Rico en Vitamina C and antioxidants.',
             fr: 'Riche en Vitamine C et antioxydants.'
         },
         properties: [
@@ -59,7 +55,7 @@ export const ingredientsData = [
         _id: 'ing-salt',
         name: { en: 'Sea Salt', es: 'Sal Marina', fr: 'Sel Marin' },
         scientificName: 'Sodium chloride',
-        image: saltImg,
+        // image: saltImg,
         description: {
             en: 'Natural mineral with antiseptic properties.',
             es: 'Mineral natural con propiedades antisépticas.',
@@ -76,7 +72,7 @@ export const ingredientsData = [
         _id: 'ing-peppermint',
         name: { en: 'Peppermint Oil', es: 'Aceite de Menta', fr: 'Huile de Menthe Poivrée' },
         scientificName: 'Mentha × piperita',
-        image: '/assets/ingredients/peppermint.png',
+        // image: peppermintImg,
         description: {
             en: 'Concentrated oil with cooling menthol.',
             es: 'Aceite concentrado con mentol refrescante.',
@@ -95,7 +91,7 @@ export const ingredientsData = [
         _id: 'ing-ginger',
         name: { en: 'Ginger', es: 'Jengibre', fr: 'Gingembre' },
         scientificName: 'Zingiber officinale',
-        image: '/assets/ingredients/ginger.png',
+        // image: gingerImg,
         description: {
             en: 'Spicy root known for digestive benefits.',
             es: 'Raíz picante conocida por sus beneficios digestivos.',
@@ -211,6 +207,24 @@ export const ingredientsData = [
         ],
         dosage: { en: '1 fruit', es: '1 fruta', fr: '1 fruit' },
         category: 'fruit',
+        safetyRating: 1
+    },
+    {
+        _id: 'ing-thyme',
+        name: { en: 'Thyme', es: 'Aloe', fr: 'Aloe' },
+        scientificName: 'Aloe barbadensis miller',
+        image: '/assets/ingredients/aloe.png',
+        description: {
+            en: 'Succulent plant with healing gel.',
+            es: 'Planta suculenta con gel curativo.',
+            fr: 'Plante succulente au gel cicatrisant.'
+        },
+        properties: [
+            { property: { en: 'Moisturizing', es: 'Hidratante', fr: 'Hydratant' }, description: { en: 'Hydrates skin', es: 'Hidrata la piel', fr: 'Hydrate la peau' } },
+            { property: { en: 'Cooling', es: 'Refrescante', fr: 'Rafraîchissant' }, description: { en: 'Soothes burns', es: 'Alivia quemaduras', fr: 'Apaise les brûlures' } }
+        ],
+        dosage: { en: 'Apply liberally', es: 'Aplicar generosamente', fr: 'Appliquer généreusement' },
+        category: 'herb',
         safetyRating: 1
     }
 ];
