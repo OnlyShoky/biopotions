@@ -28,7 +28,7 @@ const ingredientSchema = new mongoose.Schema({
     warnings: optionalLocalizedString,
     category: {
         type: String,
-        enum: ['herb', 'spice', 'mineral', 'essential-oil', 'food'],
+        enum: ['herb', 'spice', 'mineral', 'essential-oil', 'food', 'fruit', 'vegetable'],
         required: true
     },
     safetyRating: {
@@ -36,7 +36,15 @@ const ingredientSchema = new mongoose.Schema({
         min: 1,
         max: 5,
         required: true
-    }
+    },
+    versatilityScore: {
+        type: Number,
+        min: 1,
+        max: 10
+    },
+    commonUses: [{
+        type: String
+    }]
 });
 
 module.exports = mongoose.model('Ingredient', ingredientSchema);
