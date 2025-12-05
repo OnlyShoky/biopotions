@@ -1,0 +1,15 @@
+{
+    "name": "biopotions-root",
+    "version": "1.0.0",
+    "description": "Root script to run Biopotions client and server",
+    "scripts": {
+        "start": "concurrently \"npm run server\" \"npm run client\"",
+        "server": "cd server && npm start",
+        "client": "cd client && npm start",
+        "seed": "cd server && npm run seed1",
+        "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.0"
+    }
+}

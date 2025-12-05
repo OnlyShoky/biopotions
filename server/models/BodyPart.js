@@ -22,7 +22,13 @@ const bodyPartSchema = new mongoose.Schema({
             name: localizedString,
             description: localizedString,
             preparation: localizedString,
-            warnings: optionalLocalizedString
+            warnings: optionalLocalizedString,
+            ingredients: [{
+                ingredientId: { type: String, ref: 'Ingredient' }, // Using String ID to match our custom IDs
+                quantity: optionalLocalizedString, // Changed to localized string for "1 tbsp" vs "1 cda"
+                preparation: optionalLocalizedString,
+                optional: { type: Boolean, default: false }
+            }]
         }]
     }]
 });
