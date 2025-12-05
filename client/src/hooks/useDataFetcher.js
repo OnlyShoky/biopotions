@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { bodyPartsData as localData } from '../data';
 import { getBodyPartImage } from '../utils/imageMap';
+import { ENABLE_BACKEND } from '../config';
 
 const useDataFetcher = () => {
     const [data, setData] = useState([]);
@@ -10,6 +11,14 @@ const useDataFetcher = () => {
 
     useEffect(() => {
         const fetchData = async () => {
+            // If backend is disabled via config, use local data immediately
+            if (!ENABLE_BACKEND) {
+                setData(localData);
+                setIsUsingBackend(false);
+                setLoading(false);
+                return;
+            }
+
             try {
                 // Attempt to fetch from backend
                 // Assuming backend is running on localhost:5000 and proxy is set up or CORS is handled

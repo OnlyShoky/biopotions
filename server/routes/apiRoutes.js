@@ -7,7 +7,7 @@ const Favorite = require('../models/Favorite');
 // @desc    Get all body parts
 router.get('/bodyparts', async (req, res) => {
     try {
-        const bodyParts = await BodyPart.find({}, 'bodyPart'); // Only return bodyPart name and _id
+        const bodyParts = await BodyPart.find({}); // Return full documents
         res.json(bodyParts);
     } catch (err) {
         res.status(500).json({ message: err.message });

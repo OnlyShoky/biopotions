@@ -6,6 +6,12 @@ const localizedString = {
     fr: { type: String, required: true }
 };
 
+const optionalLocalizedString = {
+    en: { type: String },
+    es: { type: String },
+    fr: { type: String }
+};
+
 const bodyPartSchema = new mongoose.Schema({
     _id: { type: String, required: true }, // Explicitly using string ID to match frontend data
     bodyPart: localizedString,
@@ -16,7 +22,7 @@ const bodyPartSchema = new mongoose.Schema({
             name: localizedString,
             description: localizedString,
             preparation: localizedString,
-            warnings: localizedString
+            warnings: optionalLocalizedString
         }]
     }]
 });

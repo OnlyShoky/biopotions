@@ -4,33 +4,31 @@
 
 Biopotions is a modern, single-page application (SPA) dedicated to rediscovering the healing power of nature. It provides a curated collection of natural home remedies for common ailments, organized by body part.
 
+This project now features a **MERN stack integration** with a robust **offline fallback mechanism**.
+
 ![Biopotions Home Page](docs/images/home.png)
 
 ## ✨ Features
 
-*   **🔍 Smart Search**: Instantly find remedies by searching for body parts or specific ailments.
+*   **🔄 Hybrid Data Fetching**: Attempts to fetch data from the live backend API, but seamlessly falls back to local data if the server is unreachable.
+*   **📊 Live Data Indicator**: Visual indicator in the UI showing whether you are using "Backend Data" or "Local Fallback".
+*   **🔍 Smart Search**: Instantly find remedies by searching for body parts or specific ailments (works with both data sources).
 *   **🌍 Multi-language Support**: Fully localized in **English**, **Spanish**, and **French**.
 *   **❤️ Favorites System**: Save your most-used remedies for quick access (persisted locally).
 *   **📱 Responsive Design**: A beautiful, mobile-first interface that works perfectly on all devices.
-*   **🎨 Modern UI**: Minimalistic, nature-inspired aesthetic with smooth transitions and intuitive navigation.
-*   **⚡ Fast & Lightweight**: Built as a static frontend application for optimal performance.
 
 ## 🛠️ Tech Stack
 
-*   **Frontend**: [React](https://reactjs.org/) (v18)
-*   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-*   **Routing**: [React Router](https://reactrouter.com/)
-*   **Icons**: [Lucide React](https://lucide.dev/)
-*   **Animations**: [Framer Motion](https://www.framer.com/motion/)
-*   **SEO**: [React Helmet Async](https://github.com/staylor/react-helmet-async)
-*   **State Management**: React Context API (for Language) & LocalStorage (for Favorites)
+*   **Frontend**: React (v18), Tailwind CSS, Framer Motion
+*   **Backend**: Node.js, Express, MongoDB
+*   **Database**: MongoDB (with Mongoose)
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 *   Node.js (v14 or higher)
-*   npm or yarn
+*   MongoDB (installed and running locally)
 
 ### Installation
 
@@ -40,33 +38,75 @@ Biopotions is a modern, single-page application (SPA) dedicated to rediscovering
     cd biopotions
     ```
 
-2.  **Install dependencies**
+2.  **Setup Backend**
     ```bash
-    cd client
+    cd server
+    npm install
+    # Seed the database with initial data
+    npm run seed
+    ```
+
+3.  **Setup Frontend**
+    ```bash
+    cd ../client
     npm install
     ```
 
-3.  **Start the development server**
+### Running the Project
+
+You can run the project in two modes to test the fallback mechanism.
+
+#### Mode A: Full Stack (Backend + Frontend)
+1.  **Start MongoDB** (ensure your local mongo service is running).
+2.  **Start the Server**:
     ```bash
+    # In /server directory
     npm start
     ```
-    The app will open at `http://localhost:3000`.
+    (Server runs on port 5000)
+3.  **Start the Client**:
+    ```bash
+    # In /client directory
+    npm start
+    ```
+    (Client runs on port 3000)
 
-## 📸 Screenshots
+**Result**: The UI indicator on the top right will show **"Using backend data"** (Green).
 
-| Home Page | Ailment Details |
-|:---:|:---:|
-| ![Home](docs/images/home.png) | ![Details](docs/images/details.png) |
+#### Mode B: Frontend Only (Fallback Mode)
+1.  **Stop the Server** (Ctrl+C in the server terminal).
+2.  **Refresh the Client**.
 
-## 🌐 Deployment
+**Result**: The UI indicator will show **"Using local JSON fallback"** (Yellow). The app remains fully functional using the bundled data file.
 
-This project is optimized for deployment on **Netlify**, **Vercel**, or any static site host.
+### 🔧 Configuration
 
-**Build for production:**
-```bash
-npm run build
+You can force the application to run in **Frontend-Only Mode** (skipping the backend connection attempt entirely) by editing `client/src/config.js`:
+
+```javascript
+// client/src/config.js
+export const ENABLE_BACKEND = false; // Set to false to hide the indicator and use local data only
 ```
-The output will be in the `build` folder, ready to be deployed.
+
+This removes the connection delay when the backend is offline and hides the status indicator.
+
+## 🧪 Testing the Fallback
+
+1.  Start both client and server.
+2.  Verify the green "Using backend data" badge appears.
+3.  Kill the server process.
+4.  Refresh the page (or navigate around).
+5.  Verify the badge changes to yellow "Using local JSON fallback".
+6.  Try searching and navigating; everything should still work!
+
+## 📂 Project Structure
+
+*   `/client`: React frontend application.
+    *   `/src/data.js`: Local fallback dataset.
+    *   `/src/hooks/useDataFetcher.js`: Logic for handling the fetch-or-fallback strategy.
+*   `/server`: Express backend API.
+    *   `/models`: Mongoose schemas (BodyPart).
+    *   `/seed.js`: Script to populate MongoDB with multilingual data.
 
 ## 📄 License
 

@@ -14,13 +14,12 @@ const seedData = [
             es: 'Garganta',
             fr: 'Gorge'
         },
-        // image: throatImg, // Images are handled on frontend for now
         ailments: [
             {
                 name: {
-                    en: 'Sore Throat',
-                    es: 'Dolor de Garganta',
-                    fr: 'Mal de Gorge'
+                    en: 'Sore Throat [BACKEND]',
+                    es: 'Dolor de Garganta [BACKEND]',
+                    fr: 'Mal de Gorge [BACKEND]'
                 },
                 remedies: [
                     {
@@ -30,19 +29,19 @@ const seedData = [
                             fr: 'Thé au Miel et Citron'
                         },
                         description: {
-                            en: 'Honey soothes the throat while lemon provides Vitamin C and breaks up mucus.',
-                            es: 'La miel suaviza la garganta mientras que el limón aporta Vitamina C y rompe la mucosidad.',
-                            fr: 'Le miel apaise la gorge tandis que le citron apporte de la vitamine C et dégage le mucus.'
+                            en: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Backend data test.',
+                            es: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prueba de datos del backend.',
+                            fr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Test de données backend.'
                         },
                         preparation: {
-                            en: 'Mix 1 tbsp honey and 1 tbsp lemon juice in warm water. Drink slowly.',
-                            es: 'Mezcla 1 cda de miel y 1 cda de jugo de limón en agua tibia. Bebe despacio.',
-                            fr: 'Mélangez 1 c. à soupe de miel et 1 c. à soupe de jus de citron dans de l\'eau tiède. Buvez lentement.'
+                            en: 'Mix 1 tbsp lorem and 1 tbsp ipsum in warm water. Drink slowly.',
+                            es: 'Mezcla 1 cda de lorem y 1 cda de ipsum en agua tibia. Bebe despacio.',
+                            fr: 'Mélangez 1 c. à soupe de lorem et 1 c. à soupe de ipsum dans de l\'eau tiède. Buvez lentement.'
                         },
                         warnings: {
-                            en: 'Do not give honey to children under 1 year old.',
-                            es: 'No dar miel a niños menores de 1 año.',
-                            fr: 'Ne pas donner de miel aux enfants de moins d\'un an.'
+                            en: 'Do not give lorem to children under 1 year old.',
+                            es: 'No dar lorem a niños menores de 1 año.',
+                            fr: 'Ne pas donner de lorem aux enfants de moins d\'un an.'
                         }
                     },
                     {
@@ -52,14 +51,14 @@ const seedData = [
                             fr: 'Gargarisme à l\'Eau Salée'
                         },
                         description: {
-                            en: 'Reduces swelling and kills bacteria in the throat.',
-                            es: 'Reduce la inflamación y mata las bacterias en la garganta.',
-                            fr: 'Réduit l\'enflure et tue les bactéries dans la gorge.'
+                            en: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                            es: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                            fr: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                         },
                         preparation: {
-                            en: 'Dissolve 1/2 tsp salt in a glass of warm water. Gargle for 30 seconds and spit out.',
-                            es: 'Disuelve 1/2 cdita de sal en un vaso de agua tibia. Haz gárgaras por 30 segundos y escupe.',
-                            fr: 'Dissoudre 1/2 c. à café de sel dans un verre d\'eau tiède. Gargarisez-vous pendant 30 secondes et recrachez.'
+                            en: 'Dissolve 1/2 tsp salt in a glass of warm water. Gargle for 30 seconds.',
+                            es: 'Disuelve 1/2 cdita de sal en un vaso de agua tibia. Haz gárgaras por 30 segundos.',
+                            fr: 'Dissoudre 1/2 c. à café de sel dans un verre d\'eau tiède. Gargarisez-vous pendant 30 secondes.'
                         }
                     }
                 ]
@@ -73,13 +72,12 @@ const seedData = [
             es: 'Cabeza',
             fr: 'Tête'
         },
-        // image: headImg,
         ailments: [
             {
                 name: {
-                    en: 'Headache',
-                    es: 'Dolor de Cabeza',
-                    fr: 'Maux de Tête'
+                    en: 'Headache [BACKEND]',
+                    es: 'Dolor de Cabeza [BACKEND]',
+                    fr: 'Maux de Tête [BACKEND]'
                 },
                 remedies: [
                     {
@@ -89,9 +87,9 @@ const seedData = [
                             fr: 'Huile de Menthe Poivrée'
                         },
                         description: {
-                            en: 'Contains menthol which helps relax muscles and ease pain.',
-                            es: 'Contiene mentol que ayuda a relajar los músculos y aliviar el dolor.',
-                            fr: 'Contient du menthol qui aide à détendre les muscles et à soulager la douleur.'
+                            en: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+                            es: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+                            fr: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.'
                         },
                         preparation: {
                             en: 'Apply a few drops to your temples and massage gently.',
@@ -111,9 +109,9 @@ const seedData = [
                             fr: 'Thé au Gingembre'
                         },
                         description: {
-                            en: 'Reduces inflammation and can help with nausea associated with headaches.',
-                            es: 'Reduce la inflamación y puede ayudar con las náuseas asociadas al dolor de cabeza.',
-                            fr: 'Réduit l\'inflammation et peut aider avec les nausées associées aux maux de tête.'
+                            en: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
+                            es: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
+                            fr: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.'
                         },
                         preparation: {
                             en: 'Steep fresh ginger slices in boiling water for 10 minutes.',
@@ -132,13 +130,12 @@ const seedData = [
             es: 'Estómago',
             fr: 'Estomac'
         },
-        // image: stomachImg,
         ailments: [
             {
                 name: {
-                    en: 'Indigestion',
-                    es: 'Indigestión',
-                    fr: 'Indigestion'
+                    en: 'Indigestion [BACKEND]',
+                    es: 'Indigestión [BACKEND]',
+                    fr: 'Indigestion [BACKEND]'
                 },
                 remedies: [
                     {
@@ -148,9 +145,9 @@ const seedData = [
                             fr: 'Thé à la Camomille'
                         },
                         description: {
-                            en: 'Relaxes digestive muscles and reduces acid.',
-                            es: 'Relaja los músculos digestivos y reduce el ácido.',
-                            fr: 'Détend les muscles digestifs et réduit l\'acidité.'
+                            en: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa.',
+                            es: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa.',
+                            fr: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa.'
                         },
                         preparation: {
                             en: 'Steep chamomile flowers in hot water for 5 minutes.',
@@ -169,13 +166,12 @@ const seedData = [
             es: 'Piel',
             fr: 'Peau'
         },
-        // image: skinImg,
         ailments: [
             {
                 name: {
-                    en: 'Sunburn',
-                    es: 'Quemadura Solar',
-                    fr: 'Coup de Soleil'
+                    en: 'Sunburn [BACKEND]',
+                    es: 'Quemadura Solar [BACKEND]',
+                    fr: 'Coup de Soleil [BACKEND]'
                 },
                 remedies: [
                     {
@@ -185,9 +181,9 @@ const seedData = [
                             fr: 'Aloe Vera'
                         },
                         description: {
-                            en: 'Cools the skin and reduces inflammation.',
-                            es: 'Enfría la piel y reduce la inflamación.',
-                            fr: 'Rafraîchit la peau et réduit l\'inflammation.'
+                            en: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.',
+                            es: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.',
+                            fr: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.'
                         },
                         preparation: {
                             en: 'Apply fresh aloe gel directly to the burn.',
@@ -206,13 +202,12 @@ const seedData = [
             es: 'Pecho',
             fr: 'Poitrine'
         },
-        // image: chestImg,
         ailments: [
             {
                 name: {
-                    en: 'Cough',
-                    es: 'Tos',
-                    fr: 'Toux'
+                    en: 'Cough [BACKEND]',
+                    es: 'Tos [BACKEND]',
+                    fr: 'Toux [BACKEND]'
                 },
                 remedies: [
                     {
@@ -222,14 +217,19 @@ const seedData = [
                             fr: 'Thé au Thym'
                         },
                         description: {
-                            en: 'Relaxes the muscles of the trachea and bronchi.',
-                            es: 'Relaja los músculos de la tráquea y los bronquios.',
-                            fr: 'Détend les muscles de la trachée et des bronches.'
+                            en: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Chest remedy test.',
+                            es: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prueba de remedio para el pecho.',
+                            fr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Test de remède pour la poitrine.'
                         },
                         preparation: {
-                            en: 'Steep 2 tsp crushed thyme in boiling water for 10 mins.',
-                            es: 'Deja reposar 2 cditas de tomillo machacado en agua hirviendo por 10 mins.',
-                            fr: 'Laissez infuser 2 c. à café de thym écrasé dans de l\'eau bouillante pendant 10 min.'
+                            en: 'Steep 2 tsp lorem in boiling ipsum for 10 mins.',
+                            es: 'Deja reposar 2 cditas de lorem en ipsum hirviendo por 10 mins.',
+                            fr: 'Laissez infuser 2 c. à café de lorem dans de l\'ipsum bouillante pendant 10 min.'
+                        },
+                        warnings: {
+                            en: 'Consult a doctor if symptoms persist. [BACKEND WARNING]',
+                            es: 'Consulte a un médico si los síntomas persisten. [ADVERTENCIA BACKEND]',
+                            fr: 'Consultez un médecin si les symptômes persistent. [AVERTISSEMENT BACKEND]'
                         }
                     }
                 ]
