@@ -60,7 +60,7 @@ const IngredientDetails = () => {
 
     if (!ingredient) return (
         <div className="text-center py-20">
-            <h2 className="text-2xl font-serif text-pastel-dark mb-4">Ingredient Not Found</h2>
+            <h2 className="text-2xl font-serif text-pastel-dark mb-4">{t.ingredient_not_found}</h2>
             <Link to="/" className="text-pastel-green hover:underline">{t.back_to_home}</Link>
         </div>
     );
@@ -90,7 +90,7 @@ const IngredientDetails = () => {
                                 {ingredient.category}
                             </span>
                             <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-600 uppercase tracking-wider">
-                                Safety: {ingredient.safetyRating}/5
+                                {t.safety_label}: {ingredient.safetyRating}/5
                             </span>
                         </div>
 
@@ -101,7 +101,7 @@ const IngredientDetails = () => {
                         {/* Properties */}
                         {ingredient.properties && ingredient.properties.length > 0 && (
                             <div className="mb-6">
-                                <h3 className="font-serif font-bold text-pastel-dark mb-3">Key Properties</h3>
+                                <h3 className="font-serif font-bold text-pastel-dark mb-3">{t.key_properties}</h3>
                                 <div className="grid gap-3">
                                     {ingredient.properties.map((prop, idx) => (
                                         <div key={idx} className="flex flex-col sm:flex-row sm:items-center p-3 rounded-xl bg-pastel-cream/30">
@@ -115,14 +115,14 @@ const IngredientDetails = () => {
 
                         {/* Dosage */}
                         <div className="mb-6">
-                            <h3 className="font-serif font-bold text-pastel-dark mb-2">Recommended Dosage</h3>
+                            <h3 className="font-serif font-bold text-pastel-dark mb-2">{t.recommended_dosage}</h3>
                             <p className="text-pastel-text">{ingredient.dosage[language]}</p>
                         </div>
 
                         {/* Sources & References */}
                         {(ingredient.tags || (ingredient.sources && ingredient.sources.length > 0)) && (
                             <div className="mb-6 pt-4 border-t border-pastel-green/10">
-                                <h3 className="font-serif font-bold text-pastel-dark mb-3">Sources & References</h3>
+                                <h3 className="font-serif font-bold text-pastel-dark mb-3">{t.sources_references}</h3>
 
                                 {/* Tags */}
                                 {/* {ingredient.tags && ingredient.tags.length > 0 && (
@@ -150,7 +150,7 @@ const IngredientDetails = () => {
                                                             rel="noopener noreferrer"
                                                             className="ml-2 text-pastel-green hover:underline inline-flex items-center"
                                                         >
-                                                            Ref ↗
+                                                            {t.ref_link} ↗
                                                         </a>
                                                     )}
                                                 </span>

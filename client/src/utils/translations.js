@@ -61,7 +61,14 @@ export const translations = {
         terms_service: "Terms of Service",
         connect: "Connect",
         portfolio: "Portfolio",
-        contact_us: "Contact Us"
+        contact_us: "Contact Us",
+        // Ingredient Details
+        ingredient_not_found: "Ingredient Not Found",
+        safety_label: "Safety",
+        key_properties: "Key Properties",
+        recommended_dosage: "Recommended Dosage",
+        sources_references: "Sources & References",
+        ref_link: "Ref"
     },
     es: {
         app_name: "Biopotions",
@@ -125,7 +132,14 @@ export const translations = {
         terms_service: "Términos de Servicio",
         connect: "Conectar",
         portfolio: "Portafolio",
-        contact_us: "Contáctanos"
+        contact_us: "Contáctanos",
+        // Ingredient Details
+        ingredient_not_found: "Ingrediente no encontrado",
+        safety_label: "Seguridad",
+        key_properties: "Propiedades Clave",
+        recommended_dosage: "Dosis Recomendada",
+        sources_references: "Fuentes y Referencias",
+        ref_link: "Ref"
     },
     fr: {
         app_name: "Biopotions",
@@ -189,6 +203,13 @@ export const translations = {
         terms_service: "Conditions d'Utilisation",
         connect: "Connecter",
         portfolio: "Portfolio",
-        contact_us: "Contactez-nous"
+        contact_us: "Contactez-nous",
+        // Ingredient Details
+        ingredient_not_found: "Ingrédient introuvable",
+        safety_label: "Sécurité",
+        key_properties: "Propriétés Clés",
+        recommended_dosage: "Dosage Recommandé",
+        sources_references: "Sources et Références",
+        ref_link: "Réf"
     }
 };
