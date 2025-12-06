@@ -13,11 +13,27 @@ const SEO = ({ title, description, image, url, type = 'website' }) => {
     const metaImage = image || `${baseUrl}/og-image.png`;
     const metaUrl = url || baseUrl;
 
+    // JSON-LD Schema
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Biopotions",
+        "url": baseUrl,
+        "description": metaDescription,
+        "image": metaImage,
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": `${baseUrl}/search?q={search_term_string}`,
+            "query-input": "required name=search_term_string"
+        }
+    };
+
     return (
         <Helmet>
             {/* Standard metadata */}
             <title>{fullTitle}</title>
             <meta name="description" content={metaDescription} />
+            <link rel="canonical" href={metaUrl} />
             <html lang={language} />
 
             {/* Open Graph / Facebook */}
@@ -37,6 +53,11 @@ const SEO = ({ title, description, image, url, type = 'website' }) => {
             <meta name="twitter:description" content={metaDescription} />
             <meta name="twitter:image" content={metaImage} />
             <meta name="twitter:image:alt" content={fullTitle} />
+
+            {/* Schema.org JSON-LD */}
+            <script type="application/ld+json">
+                {JSON.stringify(schema)}
+            </script>
         </Helmet>
     );
 };

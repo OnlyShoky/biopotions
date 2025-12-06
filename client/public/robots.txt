@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://biopotions.netlify.app/sitemap.xml
