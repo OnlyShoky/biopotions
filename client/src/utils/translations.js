@@ -43,6 +43,12 @@ export const translations = {
         cat_oil: "Oil",
         cat_fruit: "Fruit",
         cat_seed: "Seed",
+        // Support
+        supportTitle: "Support BioPotions",
+        supportText: "BioPotions is a free resource. If you find it helpful, please consider supporting our work to keep the server running and the content fresh.",
+        paypal: "Donate with PayPal",
+        coffee: "Buy me a Coffee",
+        thanks: "Thank you for your support! ❤️",
         // Search Types
         type_body_part: "Body Part",
         type_ailment: "Ailment",
@@ -92,6 +98,12 @@ export const translations = {
         cat_oil: "Aceite",
         cat_fruit: "Fruta",
         cat_seed: "Semilla",
+        // Support
+        supportTitle: "Apoya a BioPotions",
+        supportText: "BioPotions es un recurso gratuito. Si te resulta útil, considera apoyar nuestro trabajo para mantener el servidor funcionando y el contenido fresco.",
+        paypal: "Donar con PayPal",
+        coffee: "Cómprame un Café",
+        thanks: "¡Gracias por tu apoyo! ❤️",
         // Search Types
         type_body_part: "Parte del Cuerpo",
         type_ailment: "Dolencia",
@@ -141,6 +153,12 @@ export const translations = {
         cat_oil: "Huile",
         cat_fruit: "Fruit",
         cat_seed: "Graine",
+        // Support
+        supportTitle: "Soutenez BioPotions",
+        supportText: "BioPotions est une ressource gratuite. Si vous la trouvez utile, envisagez de soutenir notre travail pour maintenir le serveur en marche et le contenu à jour.",
+        paypal: "Faire un don PayPal",
+        coffee: "Offrez-moi un Café",
+        thanks: "Merci pour votre soutien ! ❤️",
         // Search Types
         type_body_part: "Partie du Corps",
         type_ailment: "Affection",
