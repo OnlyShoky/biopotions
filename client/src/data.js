@@ -376,7 +376,7 @@ export const ingredientsData = [
         dosage: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' },
         category: 'food',
         safetyRating: 1,
-        versatilityScore: 6,
+        versatilityScore: 9,
         commonUses: ['Dry Skin', 'Earache', 'Cooking'],
         tags: ['quran', 'bible', 'science', 'history'],
         sources: [
@@ -811,7 +811,7 @@ export const ingredientsData = [
         dosage: { en: '2-3 fresh figs daily', es: '2-3 higos frescos diarios', fr: '2-3 figues fraîches par jour' },
         category: 'fruit',
         safetyRating: 1,
-        versatilityScore: 5,
+        versatilityScore: 9,
         commonUses: ['Constipation', 'Anemia', 'Bone Health'],
         tags: ['quran', 'science', 'bible', 'history'],
         sources: [
@@ -849,7 +849,7 @@ export const ingredientsData = [
         dosage: { en: '1 tsp daily, mixed with honey', es: '1 cdita diaria, mezclada con miel', fr: '1 c. à café par jour, mélangée avec du miel' },
         category: 'seed',
         safetyRating: 2,
-        versatilityScore: 6,
+        versatilityScore: 10,
         commonUses: ['Asthma', 'Allergies', 'Diabetes', 'Inflammation'],
         tags: ['hadith', 'science', 'history'],
         sources: [
@@ -866,6 +866,49 @@ export const ingredientsData = [
             {
                 type: 'history',
                 source: 'Found in Tutankhamun\'s tomb, Ancient Egypt'
+            }
+        ]
+    },
+    {
+        _id: 'ing-dates',
+        name: { en: 'Dates', es: 'Dátiles', fr: 'Dattes' },
+        scientificName: 'Phoenix dactylifera',
+        description: {
+            en: 'Sweet fruit rich in energy and fiber.',
+            es: 'Fruta dulce rica en energía y fibra.',
+            fr: 'Fruit sucré riche en énergie et en fibres.'
+        },
+        properties: [
+            {
+                property: { en: 'Energy Boost', es: 'Impulso de Energía', fr: 'Boost d\'Énergie' },
+                description: { en: 'Natural sugars', es: 'Azúcares naturales', fr: 'Sucres naturels' }
+            },
+            {
+                property: { en: 'Digestive', es: 'Digestivo', fr: 'Digestif' },
+                description: { en: 'Rich in fiber', es: 'Rico en fibra', fr: 'Riche en fibres' }
+            }
+        ],
+        dosage: { en: '3-7 dates daily', es: '3-7 dátiles diarios', fr: '3-7 dattes par jour' },
+        category: 'fruit',
+        safetyRating: 1,
+        versatilityScore: 9,
+        commonUses: ['Energy', 'Digestion', 'Labor'],
+        tags: ['quran', 'hadith', 'science', 'history'],
+        sources: [
+            {
+                type: 'quran',
+                source: 'Surah Maryam 19:25',
+                url: 'https://quran.com/19/25'
+            },
+            {
+                type: 'hadith',
+                source: 'Sahih Muslim 2047',
+                url: 'https://sunnah.com/muslim:2047'
+            },
+            {
+                type: 'science',
+                source: 'Date fruit nutritional review',
+                url: 'https://pubmed.ncbi.nlm.nih.gov/22188215/'
             }
         ]
     }

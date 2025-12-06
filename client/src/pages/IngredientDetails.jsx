@@ -116,7 +116,7 @@ const IngredientDetails = () => {
                                 <h3 className="font-serif font-bold text-pastel-dark mb-3">Sources & References</h3>
 
                                 {/* Tags */}
-                                {ingredient.tags && ingredient.tags.length > 0 && (
+                                {/* {ingredient.tags && ingredient.tags.length > 0 && (
                                     <div className="flex flex-wrap gap-2 mb-4">
                                         {ingredient.tags.map(tag => (
                                             <span key={tag} className="px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-600 capitalize">
@@ -124,7 +124,7 @@ const IngredientDetails = () => {
                                             </span>
                                         ))}
                                     </div>
-                                )}
+                                )} */}
 
                                 {/* Sources List */}
                                 {ingredient.sources && ingredient.sources.length > 0 && (
