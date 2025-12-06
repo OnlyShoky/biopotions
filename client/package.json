@@ -2,6 +2,8 @@
     "name": "biopotions-client",
     "version": "0.1.0",
     "private": true,
+    "author": "Mohamed EL MOURABIT",
+    "license": "MIT",
     "dependencies": {
         "autoprefixer": "^10.4.17",
         "axios": "^1.6.7",

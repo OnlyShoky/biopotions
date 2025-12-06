@@ -2,6 +2,8 @@
   "name": "biopotions-server",
   "version": "1.0.0",
   "description": "Backend for Biopotions",
+  "author": "Mohamed EL MOURABIT",
+  "license": "MIT",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",

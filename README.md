@@ -111,6 +111,3 @@ This removes the connection delay when the backend is offline and hides the stat
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-*Created with 💚 by [Your Name]*

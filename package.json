@@ -2,6 +2,8 @@
     "name": "biopotions-root",
     "version": "1.0.0",
     "description": "Root script to run Biopotions client and server",
+    "author": "Mohamed EL MOURABIT",
+    "license": "MIT",
     "scripts": {
         "start": "concurrently \"npm run server\" \"npm run client\"",
         "server": "cd server && npm start",
