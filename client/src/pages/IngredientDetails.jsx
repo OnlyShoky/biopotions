@@ -110,6 +110,48 @@ const IngredientDetails = () => {
                             <p className="text-pastel-text">{ingredient.dosage[language]}</p>
                         </div>
 
+                        {/* Sources & References */}
+                        {(ingredient.tags || (ingredient.sources && ingredient.sources.length > 0)) && (
+                            <div className="mb-6 pt-4 border-t border-pastel-green/10">
+                                <h3 className="font-serif font-bold text-pastel-dark mb-3">Sources & References</h3>
+
+                                {/* Tags */}
+                                {ingredient.tags && ingredient.tags.length > 0 && (
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        {ingredient.tags.map(tag => (
+                                            <span key={tag} className="px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-600 capitalize">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+
+                                {/* Sources List */}
+                                {ingredient.sources && ingredient.sources.length > 0 && (
+                                    <ul className="space-y-2">
+                                        {ingredient.sources.map((source, idx) => (
+                                            <li key={idx} className="flex items-start text-sm text-pastel-text/80">
+                                                <span className="w-1.5 h-1.5 rounded-full bg-pastel-green mt-1.5 mr-2 flex-shrink-0"></span>
+                                                <span>
+                                                    <span className="font-medium capitalize">{source.type}:</span> {source.source}
+                                                    {source.url && (
+                                                        <a
+                                                            href={source.url}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="ml-2 text-pastel-green hover:underline inline-flex items-center"
+                                                        >
+                                                            Ref ↗
+                                                        </a>
+                                                    )}
+                                                </span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
+                        )}
+
                         {/* Warnings */}
                         {ingredient.warnings && ingredient.warnings[language] && (
                             <div className="p-4 rounded-xl bg-red-50 border border-red-100 flex items-start">

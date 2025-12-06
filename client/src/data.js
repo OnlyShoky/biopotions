@@ -33,7 +33,13 @@ export const ingredientsData = [
         category: 'food',
         safetyRating: 1,
         versatilityScore: 9,
-        commonUses: ['Sore Throat', 'Cough', 'Wounds', 'Skin Hydration']
+        commonUses: ['Sore Throat', 'Cough', 'Wounds', 'Skin Hydration'],
+        tags: ['quran', 'science', 'hadith'],
+        sources: [
+            { type: 'quran', source: 'Surah An-Nahl 16:69', url: 'https://quran.com/an-nahl/69' },
+            { type: 'hadith', source: 'Sahih al-Bukhari 5684', url: 'https://sunnah.com/bukhari:5684' },
+            { type: 'science', source: 'Antibacterial activity of honey', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3609166/' }
+        ]
     },
     {
         _id: 'ing-lemon',
@@ -52,7 +58,12 @@ export const ingredientsData = [
         category: 'food',
         safetyRating: 1,
         versatilityScore: 9,
-        commonUses: ['Cough', 'Sore Throat', 'Digestion', 'Immunity']
+        commonUses: ['Cough', 'Sore Throat', 'Digestion', 'Immunity'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Vitamin C and immune function', url: 'https://pubmed.ncbi.nlm.nih.gov/29099763/' },
+            { type: 'history', source: 'Used by sailors for scurvy since 1747' }
+        ]
     },
     {
         _id: 'ing-garlic',
@@ -71,7 +82,13 @@ export const ingredientsData = [
         category: 'food',
         safetyRating: 1,
         versatilityScore: 8,
-        commonUses: ['Infections', 'High Blood Pressure', 'Colds']
+        commonUses: ['Infections', 'High Blood Pressure', 'Colds'],
+        tags: ['science', 'history', 'bible'],
+        sources: [
+            { type: 'science', source: 'Cardiovascular benefits of garlic', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC139960/' },
+            { type: 'history', source: 'Used in Ancient Egypt for strength', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3249897/' },
+            { type: 'bible', source: 'Numbers 11:5' }
+        ]
     },
     {
         _id: 'ing-ginger',
@@ -90,7 +107,13 @@ export const ingredientsData = [
         category: 'spice',
         safetyRating: 1,
         versatilityScore: 8,
-        commonUses: ['Nausea', 'Digestion', 'Inflammation', 'Colds']
+        commonUses: ['Nausea', 'Digestion', 'Inflammation', 'Colds'],
+        tags: ['science', 'quran', 'history'],
+        sources: [
+            { type: 'quran', source: 'Surah Al-Insan 76:17', url: 'https://quran.com/76/17' },
+            { type: 'science', source: 'Ginger for nausea and vomiting', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3995184/' },
+            { type: 'history', source: 'Used in TCM for 5000 years' }
+        ]
     },
     {
         _id: 'ing-chamomile',
@@ -109,7 +132,12 @@ export const ingredientsData = [
         category: 'herb',
         safetyRating: 1,
         versatilityScore: 8,
-        commonUses: ['Insomnia', 'Anxiety', 'Indigestion']
+        commonUses: ['Insomnia', 'Anxiety', 'Indigestion'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Chamomile for extraction of sleep', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2995283/' },
+            { type: 'history', source: 'Used by ancient Egyptians for fever' }
+        ]
     },
     {
         _id: 'ing-aloe',
@@ -128,7 +156,13 @@ export const ingredientsData = [
         category: 'herb',
         safetyRating: 1,
         versatilityScore: 8,
-        commonUses: ['Burns', 'Skin Irritation', 'Wounds']
+        commonUses: ['Burns', 'Skin Irritation', 'Wounds'],
+        tags: ['science', 'bible', 'history'],
+        sources: [
+            { type: 'bible', source: 'John 19:39' },
+            { type: 'science', source: 'Aloe vera in dermatology', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2763764/' },
+            { type: 'history', source: 'Known as "plant of immortality" in Egypt' }
+        ]
     },
     {
         _id: 'ing-acv',
@@ -147,7 +181,13 @@ export const ingredientsData = [
         category: 'food',
         safetyRating: 2,
         versatilityScore: 7,
-        commonUses: ['Digestion', 'Sore Throat', 'Skin Toner']
+        commonUses: ['Digestion', 'Sore Throat', 'Skin Toner'],
+        tags: ['science', 'history', 'hadith'],
+        sources: [
+            { type: 'hadith', source: 'Sunan Ibn Majah 3318 (Vinegar)', url: 'https://sunnah.com/ibnmajah:3318' },
+            { type: 'science', source: 'Antimicrobial activity of ACV', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5788933/' },
+            { type: 'history', source: 'Used by Hippocrates for cleaning wounds' }
+        ]
     },
     {
         _id: 'ing-turmeric',
@@ -166,7 +206,12 @@ export const ingredientsData = [
         category: 'spice',
         safetyRating: 1,
         versatilityScore: 7,
-        commonUses: ['Inflammation', 'Joint Pain', 'Digestion']
+        commonUses: ['Inflammation', 'Joint Pain', 'Digestion'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Curcumin: A Review', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5664031/' },
+            { type: 'history', source: 'Staple in Ayurvedic medicine for 4000 years' }
+        ]
     },
     {
         _id: 'ing-salt',
@@ -185,7 +230,13 @@ export const ingredientsData = [
         category: 'mineral',
         safetyRating: 1,
         versatilityScore: 7,
-        commonUses: ['Sore Throat', 'Wounds', 'Nasal Congestion']
+        commonUses: ['Sore Throat', 'Wounds', 'Nasal Congestion'],
+        tags: ['bible', 'science', 'history'],
+        sources: [
+            { type: 'bible', source: 'Matthew 5:13 (Metaphorical)', url: 'https://www.biblegateway.com/passage/?search=Matthew+5%3A13&version=KJV' },
+            { type: 'science', source: 'Saline irrigation for rhinosinusitis', url: 'https://pubmed.ncbi.nlm.nih.gov/22769666/' },
+            { type: 'history', source: 'Used for food preservation and health globally' }
+        ]
     },
     {
         _id: 'ing-coconut-oil',
@@ -204,7 +255,12 @@ export const ingredientsData = [
         category: 'food',
         safetyRating: 1,
         versatilityScore: 7,
-        commonUses: ['Dry Skin', 'Hair Care', 'Energy']
+        commonUses: ['Dry Skin', 'Hair Care', 'Energy'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Anti-inflammatory and skin barrier repair', url: 'https://pubmed.ncbi.nlm.nih.gov/20523108/' },
+            { type: 'history', source: 'Ayurvedic pulling oil' }
+        ]
     },
     {
         _id: 'ing-baking-soda',
@@ -223,7 +279,12 @@ export const ingredientsData = [
         category: 'mineral',
         safetyRating: 2,
         versatilityScore: 6,
-        commonUses: ['Heartburn', 'Insect Bites', 'Exfoliation']
+        commonUses: ['Heartburn', 'Insect Bites', 'Exfoliation'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Sodium bicarbonate and heartburn', url: 'https://pubmed.ncbi.nlm.nih.gov/2660472/' },
+            { type: 'history', source: 'Used in ancient Egypt (Natron)' }
+        ]
     },
     {
         _id: 'ing-cinnamon',
@@ -242,7 +303,13 @@ export const ingredientsData = [
         category: 'spice',
         safetyRating: 1,
         versatilityScore: 6,
-        commonUses: ['Diabetes', 'Infections', 'Digestion']
+        commonUses: ['Diabetes', 'Infections', 'Digestion'],
+        tags: ['science', 'bible', 'history'],
+        sources: [
+            { type: 'bible', source: 'Exodus 30:23' },
+            { type: 'science', source: 'Cinnamon and blood glucose', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4466762/' },
+            { type: 'history', source: 'Highly prized in ancient trade routes' }
+        ]
     },
     {
         _id: 'ing-peppermint',
@@ -261,7 +328,12 @@ export const ingredientsData = [
         category: 'herb',
         safetyRating: 1,
         versatilityScore: 6,
-        commonUses: ['Indigestion', 'Headache', 'Congestion']
+        commonUses: ['Indigestion', 'Headache', 'Congestion'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Peppermint oil for IBS', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5814329/' },
+            { type: 'history', source: 'Found in Egyptian pyramids from 1000 BC' }
+        ]
     },
     {
         _id: 'ing-cucumber',
@@ -280,7 +352,13 @@ export const ingredientsData = [
         category: 'vegetable',
         safetyRating: 1,
         versatilityScore: 6,
-        commonUses: ['Puffy Eyes', 'Sunburn', 'Hydration']
+        commonUses: ['Puffy Eyes', 'Sunburn', 'Hydration'],
+        tags: ['science', 'history', 'bible'],
+        sources: [
+            { type: 'bible', source: 'Numbers 11:5' },
+            { type: 'science', source: 'Phytochemical analysis', url: 'https://pubmed.ncbi.nlm.nih.gov/23098877/' },
+            { type: 'history', source: 'Cultivated in India for over 3000 years' }
+        ]
     },
     {
         _id: 'ing-olive-oil',
@@ -299,7 +377,14 @@ export const ingredientsData = [
         category: 'food',
         safetyRating: 1,
         versatilityScore: 6,
-        commonUses: ['Dry Skin', 'Earache', 'Cooking']
+        commonUses: ['Dry Skin', 'Earache', 'Cooking'],
+        tags: ['quran', 'bible', 'science', 'history'],
+        sources: [
+            { type: 'quran', source: 'Surah An-Nur 24:35', url: 'https://quran.com/24/35' },
+            { type: 'bible', source: 'Deuteronomy 8:8' },
+            { type: 'science', source: 'Olive oil and skin health', url: 'https://pubmed.ncbi.nlm.nih.gov/19167997/' },
+            { type: 'history', source: 'Symbol of peace and health since antiquity' }
+        ]
     },
     {
         _id: 'ing-clove',
@@ -318,7 +403,12 @@ export const ingredientsData = [
         category: 'spice',
         safetyRating: 2,
         versatilityScore: 5,
-        commonUses: ['Toothache', 'Infections', 'Muscle Pain']
+        commonUses: ['Toothache', 'Infections', 'Muscle Pain'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Eugenol analgesic properties', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3819475/' },
+            { type: 'history', source: 'Used in Han Dynasty China to freshen breath' }
+        ]
     },
     {
         _id: 'ing-thyme',
@@ -337,7 +427,12 @@ export const ingredientsData = [
         category: 'herb',
         safetyRating: 1,
         versatilityScore: 5,
-        commonUses: ['Cough', 'Bronchitis', 'Digestion']
+        commonUses: ['Cough', 'Bronchitis', 'Digestion'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Thyme for acute bronchitis', url: 'https://pubmed.ncbi.nlm.nih.gov/17063641/' },
+            { type: 'history', source: 'Used by Romans to purify rooms' }
+        ]
     },
     {
         _id: 'ing-rosemary',
@@ -356,7 +451,12 @@ export const ingredientsData = [
         category: 'herb',
         safetyRating: 1,
         versatilityScore: 5,
-        commonUses: ['Memory', 'Muscle Pain', 'Hair Growth']
+        commonUses: ['Memory', 'Muscle Pain', 'Hair Growth'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Rosemary aroma and cognition', url: 'https://pubmed.ncbi.nlm.nih.gov/22612497/' },
+            { type: 'history', source: 'Symbol of remembrance' }
+        ]
     },
     {
         _id: 'ing-oregano',
@@ -375,7 +475,12 @@ export const ingredientsData = [
         category: 'herb',
         safetyRating: 1,
         versatilityScore: 5,
-        commonUses: ['Infections', 'Digestion', 'Immunity']
+        commonUses: ['Infections', 'Digestion', 'Immunity'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Antimicrobial activity of oregano', url: 'https://pubmed.ncbi.nlm.nih.gov/23484421/' },
+            { type: 'history', source: 'Used by Greeks for trauma' }
+        ]
     },
     {
         _id: 'ing-lavender',
@@ -394,7 +499,12 @@ export const ingredientsData = [
         category: 'herb',
         safetyRating: 1,
         versatilityScore: 5,
-        commonUses: ['Anxiety', 'Sleep', 'Burns']
+        commonUses: ['Anxiety', 'Sleep', 'Burns'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Lavender for anxiety and sleep', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3612440/' },
+            { type: 'history', source: 'Used in Roman baths' }
+        ]
     },
     {
         _id: 'ing-eucalyptus',
@@ -413,7 +523,12 @@ export const ingredientsData = [
         category: 'herb',
         safetyRating: 2,
         versatilityScore: 4,
-        commonUses: ['Congestion', 'Colds', 'Muscle Pain']
+        commonUses: ['Congestion', 'Colds', 'Muscle Pain'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Eucalyptus oil for respiratory tract', url: 'https://pubmed.ncbi.nlm.nih.gov/20359267/' },
+            { type: 'history', source: 'Traditional Aboriginal remedy' }
+        ]
     },
     {
         _id: 'ing-onion',
@@ -432,7 +547,13 @@ export const ingredientsData = [
         category: 'food',
         safetyRating: 1,
         versatilityScore: 4,
-        commonUses: ['Cough', 'Colds', 'Infections']
+        commonUses: ['Cough', 'Colds', 'Infections'],
+        tags: ['science', 'bible', 'quran', 'history'],
+        sources: [
+            { type: 'bible', source: 'Numbers 11:5' },
+            { type: 'quran', source: 'Surah Al-Baqarah 2:61', url: 'https://quran.com/2/61' },
+            { type: 'science', source: 'Anti-inflammatory effects of onion', url: 'https://pubmed.ncbi.nlm.nih.gov/19223126/' }
+        ]
     },
     {
         _id: 'ing-carrot',
@@ -451,7 +572,12 @@ export const ingredientsData = [
         category: 'food',
         safetyRating: 1,
         versatilityScore: 4,
-        commonUses: ['Vision', 'Skin Care', 'Immunity']
+        commonUses: ['Vision', 'Skin Care', 'Immunity'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Carotenoids and eye health', url: 'https://pubmed.ncbi.nlm.nih.gov/12134711/' },
+            { type: 'history', source: 'Cultivated in Afghanistan since 900 AD' }
+        ]
     },
     {
         _id: 'ing-oat',
@@ -470,7 +596,12 @@ export const ingredientsData = [
         category: 'food',
         safetyRating: 1,
         versatilityScore: 4,
-        commonUses: ['Eczema', 'Digestion', 'Energy']
+        commonUses: ['Eczema', 'Digestion', 'Energy'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Colloidal oatmeal for skin', url: 'https://pubmed.ncbi.nlm.nih.gov/25607907/' },
+            { type: 'history', source: 'Used in Roman times for skin' }
+        ]
     },
     {
         _id: 'ing-papaya',
@@ -489,7 +620,12 @@ export const ingredientsData = [
         category: 'fruit',
         safetyRating: 1,
         versatilityScore: 4,
-        commonUses: ['Indigestion', 'Skin', 'Parasites']
+        commonUses: ['Indigestion', 'Skin', 'Parasites'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Papain for digestion', url: 'https://pubmed.ncbi.nlm.nih.gov/23524622/' },
+            { type: 'history', source: 'Native to Central America' }
+        ]
     },
     {
         _id: 'ing-pineapple',
@@ -508,7 +644,12 @@ export const ingredientsData = [
         category: 'fruit',
         safetyRating: 1,
         versatilityScore: 4,
-        commonUses: ['Inflammation', 'Digestion', 'Cough']
+        commonUses: ['Inflammation', 'Digestion', 'Cough'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Bromelain anti-inflammatory', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3529416/' },
+            { type: 'history', source: 'Discovered by Columbus in Guadeloupe' }
+        ]
     },
     {
         _id: 'ing-fennel',
@@ -527,7 +668,12 @@ export const ingredientsData = [
         category: 'herb',
         safetyRating: 1,
         versatilityScore: 3,
-        commonUses: ['Gas', 'Bloating', 'Colic']
+        commonUses: ['Gas', 'Bloating', 'Colic'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Fennel oil for colic', url: 'https://pubmed.ncbi.nlm.nih.gov/12868253/' },
+            { type: 'history', source: 'Used by Roman soldiers for strength' }
+        ]
     },
     {
         _id: 'ing-sage',
@@ -546,7 +692,12 @@ export const ingredientsData = [
         category: 'herb',
         safetyRating: 2,
         versatilityScore: 3,
-        commonUses: ['Sore Throat', 'Sweating', 'Memory']
+        commonUses: ['Sore Throat', 'Sweating', 'Memory'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Sage for cognition', url: 'https://pubmed.ncbi.nlm.nih.gov/16018370/' },
+            { type: 'history', source: 'Sacred herb in Rome' }
+        ]
     },
     {
         _id: 'ing-ginseng',
@@ -565,7 +716,12 @@ export const ingredientsData = [
         category: 'herb',
         safetyRating: 2,
         versatilityScore: 3,
-        commonUses: ['Fatigue', 'Stress', 'Immunity']
+        commonUses: ['Fatigue', 'Stress', 'Immunity'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Ginseng immune modulation', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3659612/' },
+            { type: 'history', source: 'Used in China for thousands of years' }
+        ]
     },
     {
         _id: 'ing-valerian',
@@ -584,7 +740,12 @@ export const ingredientsData = [
         category: 'herb',
         safetyRating: 2,
         versatilityScore: 3,
-        commonUses: ['Insomnia', 'Anxiety', 'Muscle Pain']
+        commonUses: ['Insomnia', 'Anxiety', 'Muscle Pain'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Valerian for sleep', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4394901/' },
+            { type: 'history', source: 'Prescribed by Hippocrates' }
+        ]
     },
     {
         _id: 'ing-epsom-salt',
@@ -602,7 +763,12 @@ export const ingredientsData = [
         category: 'mineral',
         safetyRating: 1,
         versatilityScore: 4,
-        commonUses: ['Muscle Pain', 'Stress', 'Splinters']
+        commonUses: ['Muscle Pain', 'Stress', 'Splinters'],
+        tags: ['science', 'history'],
+        sources: [
+            { type: 'science', source: 'Magnesium absorption', url: 'https://pubmed.ncbi.nlm.nih.gov/26343101/' },
+            { type: 'history', source: 'Discovered in Epsom, England' }
+        ]
     },
     {
         _id: 'ing-banana',
@@ -620,7 +786,88 @@ export const ingredientsData = [
         category: 'fruit',
         safetyRating: 1,
         versatilityScore: 3,
-        commonUses: ['Cramps', 'Digestion', 'Energy']
+        commonUses: ['Cramps', 'Digestion', 'Energy'],
+        tags: ['science', 'quran', 'history'],
+        sources: [
+            { type: 'quran', source: 'Surah Al-Waqi\'ah 56:29', url: 'https://quran.com/56/29' },
+            { type: 'science', source: 'Potassium benefits', url: 'https://pubmed.ncbi.nlm.nih.gov/23674806/' }
+        ]
+    },
+    {
+        _id: 'ing-figs',
+        name: { en: 'Figs', es: 'Higos', fr: 'Figues' },
+        scientificName: 'Ficus carica',
+        description: {
+            en: 'Nutrient-rich fruit with digestive benefits',
+            es: 'Fruta rica en nutrientes con beneficios digestivos',
+            fr: 'Fruit riche en nutriments avec des bienfaits digestifs'
+        },
+        properties: [
+            {
+                property: { en: 'Digestive Aid', es: 'Ayuda Digestiva', fr: 'Aide Digestive' },
+                description: { en: 'High fiber content relieves constipation', es: 'Alto contenido en fibra alivia el estreñimiento', fr: 'Teneur élevée en fibres soulage la constipation' }
+            }
+        ],
+        dosage: { en: '2-3 fresh figs daily', es: '2-3 higos frescos diarios', fr: '2-3 figues fraîches par jour' },
+        category: 'fruit',
+        safetyRating: 1,
+        versatilityScore: 5,
+        commonUses: ['Constipation', 'Anemia', 'Bone Health'],
+        tags: ['quran', 'science', 'bible', 'history'],
+        sources: [
+            {
+                type: 'quran',
+                source: 'Surah At-Tin 95:1',
+                url: 'https://quran.com/at-tin/1'
+            },
+            {
+                type: 'science',
+                source: 'Nutritional benefits of figs',
+                url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3934558/'
+            },
+            {
+                type: 'history',
+                source: 'One of first cultivated fruits, 9400 BCE'
+            }
+        ]
+    },
+    {
+        _id: 'ing-black-seed',
+        name: { en: 'Black Seed', es: 'Semilla Negra', fr: 'Graine Noire' },
+        scientificName: 'Nigella sativa',
+        description: {
+            en: 'Powerful seed with anti-inflammatory and immune-boosting properties',
+            es: 'Semilla poderosa con propiedades antiinflamatorias y estimulantes del sistema inmunológico',
+            fr: 'Graine puissante aux propriétés anti-inflammatoires et stimulantes du système immunitaire'
+        },
+        properties: [
+            {
+                property: { en: 'Anti-inflammatory', es: 'Antiinflamatorio', fr: 'Anti-inflammatoire' },
+                description: { en: 'Reduces inflammation throughout body', es: 'Reduce la inflamación en todo el cuerpo', fr: 'Réduit l\'inflammation dans tout le corps' }
+            }
+        ],
+        dosage: { en: '1 tsp daily, mixed with honey', es: '1 cdita diaria, mezclada con miel', fr: '1 c. à café par jour, mélangée avec du miel' },
+        category: 'seed',
+        safetyRating: 2,
+        versatilityScore: 6,
+        commonUses: ['Asthma', 'Allergies', 'Diabetes', 'Inflammation'],
+        tags: ['hadith', 'science', 'history'],
+        sources: [
+            {
+                type: 'hadith',
+                source: 'Sahih al-Bukhari 5688',
+                url: 'https://sunnah.com/bukhari:5688'
+            },
+            {
+                type: 'science',
+                source: 'Black seed and its active constituents',
+                url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3642442/'
+            },
+            {
+                type: 'history',
+                source: 'Found in Tutankhamun\'s tomb, Ancient Egypt'
+            }
+        ]
     }
 ];
 
@@ -1178,6 +1425,22 @@ export const bodyPartsData = [
                         ingredients: [
                             { ingredientId: 'ing-olive-oil', quantity: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' } }
                         ]
+                    },
+                    {
+                        name: { en: 'Fig Paste for Constipation', es: 'Pasta de Higos para Estreñimiento', fr: 'Pâte de Figues pour la Constipation' },
+                        description: {
+                            en: 'Natural laxative that relieves constipation gently',
+                            es: 'Laxante natural que alivia el estreñimiento suavemente',
+                            fr: 'Laxatif naturel qui soulage la constipation en douceur'
+                        },
+                        preparation: {
+                            en: 'Mash fresh figs into a paste. Eat on empty stomach.',
+                            es: 'Aplasta higos frescos hasta hacer una pasta. Come con el estómago vacío.',
+                            fr: 'Écraser les figues fraîches en une pâte. Mangez l\'estomac vide.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-figs', quantity: { en: '3-4 fresh figs', es: '3-4 higos frescos', fr: '3-4 figues fraîches' } }
+                        ]
                     }
                 ]
             }
@@ -1486,6 +1749,23 @@ export const bodyPartsData = [
                         },
                         ingredients: [
                             { ingredientId: 'ing-peppermint', quantity: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Black Seed Oil for Breathing', es: 'Aceite de Semilla Negra para Respirar', fr: 'Huile de Graine Noire pour la Respiration' },
+                        description: {
+                            en: 'Reduces inflammation in airways and improves breathing',
+                            es: 'Reduce la inflamación en las vías respiratorias y mejora la respiración',
+                            fr: 'Réduit l\'inflammation des voies respiratoires et améliore la respiration'
+                        },
+                        preparation: {
+                            en: 'Mix oil with honey and warm water. Drink daily.',
+                            es: 'Mezcla aceite con miel y agua tibia. Bebe diariamente.',
+                            fr: 'Mélanger l\'huile avec du miel et de l\'eau tiède. Buvez quotidiennement.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-black-seed', quantity: { en: '1 tsp oil', es: '1 cdita de aceite', fr: '1 c. à café d\'huile' } },
+                            { ingredientId: 'ing-honey', quantity: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' } }
                         ]
                     }
                 ]
