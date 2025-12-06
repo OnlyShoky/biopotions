@@ -10,9 +10,12 @@ import About from './pages/About';
 
 import TopIngredients from './pages/TopIngredients';
 
+import ScrollToTop from './components/ScrollToTop';
+
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home />} />
