@@ -64,11 +64,11 @@ const Home = () => {
                     <h2 className="text-3xl font-serif font-bold text-pastel-dark mb-4">{t.supportTitle}</h2>
                     <p className="text-pastel-text mb-8 text-lg">{t.supportText}</p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="https://www.paypal.com/donate/?hosted_button_id=P49L3AK8RDVMN" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-[#0070BA] text-white rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=P49L3AK8RDVMN" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-[#bae1ff] text-gray-800 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
                             <Heart className="mr-2" size={20} />
                             {t.paypal}
                         </a>
-                        <a href="https://www.buymeacoffee.com/shoky" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-[#FFDD00] text-gray-800 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <a href="https://www.buymeacoffee.com/shoky" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-[#ffffba] text-gray-800 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
                             <Coffee className="mr-2" size={20} />
                             {t.coffee}
                         </a>
