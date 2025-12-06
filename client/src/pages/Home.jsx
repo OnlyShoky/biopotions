@@ -50,7 +50,7 @@ const Home = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full max-w-5xl px-4"
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-5xl px-4"
                 >
                     {bodyParts.map((bp) => (
                         <BodyPartCard key={bp._id} name={bp.bodyPart[language]} image={bp.image} originalName={bp.bodyPart.en} />
