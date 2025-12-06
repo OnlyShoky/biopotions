@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, AlertTriangle } from 'lucide-react';
 import useDataFetcher from '../hooks/useDataFetcher';
 import { useLanguage } from '../context/LanguageContext';
@@ -10,10 +10,19 @@ import { ENABLE_BACKEND } from '../config';
 
 const IngredientDetails = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [ingredient, setIngredient] = useState(null);
     const [loading, setLoading] = useState(true);
     const { language } = useLanguage();
     const t = translations[language];
+
+    const handleBack = () => {
+        if (window.history.length > 2) {
+            navigate(-1);
+        } else {
+            navigate('/');
+        }
+    };
 
     useEffect(() => {
         const fetchIngredient = async () => {
@@ -63,7 +72,7 @@ const IngredientDetails = () => {
                 description={ingredient.description[language]}
             />
 
-            <button onClick={() => window.history.back()} className="inline-flex items-center text-pastel-text/60 hover:text-pastel-green mb-6 transition-colors">
+            <button onClick={handleBack} className="inline-flex items-center text-pastel-text/60 hover:text-pastel-green mb-6 transition-colors">
                 <ArrowLeft size={20} className="mr-2" /> {t.back}
             </button>
 
