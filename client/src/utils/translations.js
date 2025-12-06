@@ -52,7 +52,16 @@ export const translations = {
         // Search Types
         type_body_part: "Body Part",
         type_ailment: "Ailment",
-        type_ingredient: "Ingredient"
+        type_ingredient: "Ingredient",
+        // Footer New
+        footer_desc: "Natural remedies for a better life. Discover the power of nature.",
+        quick_links: "Quick Links",
+        legal: "Legal",
+        privacy_policy: "Privacy Policy",
+        terms_service: "Terms of Service",
+        connect: "Connect",
+        portfolio: "Portfolio",
+        contact_us: "Contact Us"
     },
     es: {
         app_name: "Biopotions",
@@ -107,7 +116,16 @@ export const translations = {
         // Search Types
         type_body_part: "Parte del Cuerpo",
         type_ailment: "Dolencia",
-        type_ingredient: "Ingrediente"
+        type_ingredient: "Ingrediente",
+        // Footer New
+        footer_desc: "Remedios naturales para una vida mejor. Descubre el poder de la naturaleza.",
+        quick_links: "Enlaces Rápidos",
+        legal: "Legal",
+        privacy_policy: "Política de Privacidad",
+        terms_service: "Términos de Servicio",
+        connect: "Conectar",
+        portfolio: "Portafolio",
+        contact_us: "Contáctanos"
     },
     fr: {
         app_name: "Biopotions",
@@ -162,6 +180,15 @@ export const translations = {
         // Search Types
         type_body_part: "Partie du Corps",
         type_ailment: "Affection",
-        type_ingredient: "Ingrédient"
+        type_ingredient: "Ingrédient",
+        // Footer New
+        footer_desc: "Des remèdes naturels pour une vie meilleure. Découvrez le pouvoir de la nature.",
+        quick_links: "Liens Rapides",
+        legal: "Légal",
+        privacy_policy: "Politique de Confidentialité",
+        terms_service: "Conditions d'Utilisation",
+        connect: "Connecter",
+        portfolio: "Portfolio",
+        contact_us: "Contactez-nous"
     }
 };
