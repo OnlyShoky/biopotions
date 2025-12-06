@@ -705,6 +705,103 @@ export const bodyPartsData = [
                         ]
                     }
                 ]
+            },
+            {
+                name: { en: 'Tonsillitis', es: 'Amigdalitis', fr: 'Amygdalite' },
+                remedies: [
+                    {
+                        name: { en: 'Sage Gargle', es: 'Gárgaras de Salvia', fr: 'Gargarisme à la Sauge' },
+                        description: {
+                            en: 'Antibacterial herb that soothes inflammation.',
+                            es: 'Hierba antibacteriana que calma la inflamación.',
+                            fr: 'Herbe antibactérienne qui apaise l\'inflammation.'
+                        },
+                        preparation: {
+                            en: 'Steep sage in hot water. Cool and gargle.',
+                            es: 'Deja reposar salvia en agua caliente. Enfría y haz gárgaras.',
+                            fr: 'Laissez infuser la sauge dans l\'eau chaude. Refroidir et gargariser.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-sage', quantity: { en: '1 tbsp dried', es: '1 cda seca', fr: '1 c. à soupe séchée' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Salt & Baking Soda', es: 'Sal y Bicarbonato', fr: 'Sel et Bicarbonate' },
+                        description: {
+                            en: 'Cleanses and reduces swelling.',
+                            es: 'Limpia y reduce la hinchazón.',
+                            fr: 'Nettoie et réduit l\'enflure.'
+                        },
+                        preparation: {
+                            en: 'Mix salt and baking soda in warm water. Gargle.',
+                            es: 'Mezcla sal y bicarbonato en agua tibia. Haz gárgaras.',
+                            fr: 'Mélangez le sel et le bicarbonate dans de l\'eau tiède. Gargarisez-vous.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-salt', quantity: { en: '1/2 tsp', es: '1/2 cdita', fr: '1/2 c. à café' } },
+                            { ingredientId: 'ing-baking-soda', quantity: { en: '1/4 tsp', es: '1/4 cdita', fr: '1/4 c. à café' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Bad Breath', es: 'Mal Aliento', fr: 'Mauvaise Haleine' },
+                remedies: [
+                    {
+                        name: { en: 'Clove Chew', es: 'Masticar Clavo', fr: 'Mâcher du Clou de Girofle' },
+                        description: {
+                            en: 'Kills bacteria causing odor.',
+                            es: 'Mata bacterias que causan mal olor.',
+                            fr: 'Tue les bactéries causant les mauvaises odeurs.'
+                        },
+                        preparation: {
+                            en: 'Chew on a whole clove.',
+                            es: 'Mastica un clavo entero.',
+                            fr: 'Mâchez un clou de girofle entier.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-clove', quantity: { en: '1 piece', es: '1 pieza', fr: '1 pièce' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Fennel Seeds', es: 'Semillas de Hinojo', fr: 'Graines de Fenouil' },
+                        description: {
+                            en: 'Freshens breath naturally.',
+                            es: 'Refresca el aliento naturalmente.',
+                            fr: 'Rafraîchit l\'haleine naturellement.'
+                        },
+                        preparation: {
+                            en: 'Chew a pinch of seeds.',
+                            es: 'Mastica una pizca de semillas.',
+                            fr: 'Mâchez une pincée de graines.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-fennel', quantity: { en: '1/2 tsp', es: '1/2 cdita', fr: '1/2 c. à café' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Laryngitis', es: 'Laringitis', fr: 'Laryngite' },
+                remedies: [
+                    {
+                        name: { en: 'Ginger Tea', es: 'Té de Jengibre', fr: 'Thé au Gingembre' },
+                        description: {
+                            en: 'Soothes vocal cords.',
+                            es: 'Suaviza las cuerdas vocales.',
+                            fr: 'Apaise les cordes vocales.'
+                        },
+                        preparation: {
+                            en: 'Drink warm ginger tea with honey.',
+                            es: 'Bebe té de jengibre tibio con miel.',
+                            fr: 'Buvez du thé au gingembre tiède avec du miel.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-ginger', quantity: { en: '1 tsp', es: '1 cdita', fr: '1 c. à café' } },
+                            { ingredientId: 'ing-honey', quantity: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' } }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -779,6 +876,119 @@ export const bodyPartsData = [
                         },
                         ingredients: [
                             { ingredientId: 'ing-lavender', quantity: { en: '5 drops', es: '5 gotas', fr: '5 gouttes' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Migraine', es: 'Migraña', fr: 'Migraine' },
+                remedies: [
+                    {
+                        name: { en: 'Ginger & Lemon', es: 'Jengibre y Limón', fr: 'Gingembre et Citron' },
+                        description: {
+                            en: 'Relieves nausea and inflammation.',
+                            es: 'Alivia náuseas e inflamación.',
+                            fr: 'Soulage les nausées et l\'inflammation.'
+                        },
+                        preparation: {
+                            en: 'Drink warm ginger tea with lemon juice.',
+                            es: 'Bebe té de jengibre tibio con jugo de limón.',
+                            fr: 'Buvez du thé au gingembre tiède avec du jus de citron.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-ginger', quantity: { en: '1 tsp', es: '1 cdita', fr: '1 c. à café' } },
+                            { ingredientId: 'ing-lemon', quantity: { en: '1/2 lemon', es: '1/2 limón', fr: '1/2 citron' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Cold Cucumber Compress', es: 'Compresa Fría de Pepino', fr: 'Compresse Froide de Concombre' },
+                        description: {
+                            en: 'Numbs pain and reduces throbbing.',
+                            es: 'Adormece el dolor y reduce las palpitaciones.',
+                            fr: 'Engourdit la douleur et réduit les palpitations.'
+                        },
+                        preparation: {
+                            en: 'Place cold cucumber slices on forehead and eyes.',
+                            es: 'Coloca rodajas de pepino frías en la frente y ojos.',
+                            fr: 'Placez des tranches de concombre froides sur le front et les yeux.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-cucumber', quantity: { en: '4 slices', es: '4 rodajas', fr: '4 tranches' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Dandruff', es: 'Caspa', fr: 'Pellicules' },
+                remedies: [
+                    {
+                        name: { en: 'Aloe Vera Mask', es: 'Mascarilla de Aloe Vera', fr: 'Masque à l\'Aloe Vera' },
+                        description: {
+                            en: 'Hydrates scalp and reduces itching.',
+                            es: 'Hidrata el cuero cabelludo y reduce la picazón.',
+                            fr: 'Hydrate le cuir chevelu et réduit les démangeaisons.'
+                        },
+                        preparation: {
+                            en: 'Massage aloe gel into scalp. Leave for 30 mins.',
+                            es: 'Masajea gel de aloe en el cuero cabelludo. Deja 30 mins.',
+                            fr: 'Massez le gel d\'aloe sur le cuir chevelu. Laissez 30 min.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-aloe', quantity: { en: '2 tbsp', es: '2 cdas', fr: '2 c. à soupe' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'ACV Rinse', es: 'Enjuague de Vinagre', fr: 'Rinçage au Vinaigre' },
+                        description: {
+                            en: 'Balances scalp pH.',
+                            es: 'Equilibra el pH del cuero cabelludo.',
+                            fr: 'Équilibre le pH du cuir chevelu.'
+                        },
+                        preparation: {
+                            en: 'Mix vinegar with water. Rinse hair after washing.',
+                            es: 'Mezcla vinagre con agua. Enjuaga el cabello después de lavar.',
+                            fr: 'Mélangez le vinaigre avec de l\'eau. Rincez les cheveux après lavage.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-acv', quantity: { en: '2 tbsp', es: '2 cdas', fr: '2 c. à soupe' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Insomnia', es: 'Insomnio', fr: 'Insomnie' },
+                remedies: [
+                    {
+                        name: { en: 'Chamomile & Lavender', es: 'Manzanilla y Lavanda', fr: 'Camomille et Lavande' },
+                        description: {
+                            en: 'Ultimate relaxation blend.',
+                            es: 'Mezcla de relajación definitiva.',
+                            fr: 'Mélange de relaxation ultime.'
+                        },
+                        preparation: {
+                            en: 'Brew tea with both herbs. Drink 30 mins before bed.',
+                            es: 'Prepara té con ambas hierbas. Bebe 30 mins antes de dormir.',
+                            fr: 'Infusez le thé avec les deux herbes. Buvez 30 min avant de dormir.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-chamomile', quantity: { en: '1 tsp', es: '1 cdita', fr: '1 c. à café' } },
+                            { ingredientId: 'ing-lavender', quantity: { en: '1/2 tsp', es: '1/2 cdita', fr: '1/2 c. à café' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Valerian Root', es: 'Raíz de Valeriana', fr: 'Racine de Valériane' },
+                        description: {
+                            en: 'Strong natural sedative.',
+                            es: 'Sedante natural fuerte.',
+                            fr: 'Sédatif naturel puissant.'
+                        },
+                        preparation: {
+                            en: 'Steep root in hot water. Drink warm.',
+                            es: 'Deja reposar la raíz en agua caliente. Bebe tibio.',
+                            fr: 'Laissez infuser la racine dans l\'eau chaude. Buvez chaud.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-valerian', quantity: { en: '1 tsp', es: '1 cdita', fr: '1 c. à café' } }
                         ]
                     }
                 ]
@@ -858,6 +1068,118 @@ export const bodyPartsData = [
                         ]
                     }
                 ]
+            },
+            {
+                name: { en: 'Nausea', es: 'Náuseas', fr: 'Nausées' },
+                remedies: [
+                    {
+                        name: { en: 'Ginger Chew', es: 'Masticar Jengibre', fr: 'Mâcher du Gingembre' },
+                        description: {
+                            en: 'Stops nausea quickly.',
+                            es: 'Detiene las náuseas rápidamente.',
+                            fr: 'Arrête les nausées rapidement.'
+                        },
+                        preparation: {
+                            en: 'Chew on a small piece of fresh ginger.',
+                            es: 'Mastica un pequeño trozo de jengibre fresco.',
+                            fr: 'Mâchez un petit morceau de gingembre frais.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-ginger', quantity: { en: '1 slice', es: '1 rodaja', fr: '1 tranche' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Peppermint Tea', es: 'Té de Menta', fr: 'Thé à la Menthe' },
+                        description: {
+                            en: 'Settles the stomach.',
+                            es: 'Asienta el estómago.',
+                            fr: 'Apaise l\'estomac.'
+                        },
+                        preparation: {
+                            en: 'Steep mint in hot water. Sip slowly.',
+                            es: 'Deja reposar menta en agua caliente. Bebe despacio.',
+                            fr: 'Laissez infuser la menthe dans l\'eau chaude. Sirotez lentement.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-peppermint', quantity: { en: '1 tbsp fresh', es: '1 cda fresca', fr: '1 c. à soupe fraîche' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Heartburn', es: 'Acidez', fr: 'Brûlures d\'Estomac' },
+                remedies: [
+                    {
+                        name: { en: 'Banana', es: 'Banana', fr: 'Banane' },
+                        description: {
+                            en: 'Natural antacid that coats stomach lining.',
+                            es: 'Antiácido natural que recubre el revestimiento estomacal.',
+                            fr: 'Antiacide naturel qui tapisse la paroi de l\'estomac.'
+                        },
+                        preparation: {
+                            en: 'Eat a ripe banana.',
+                            es: 'Come una banana madura.',
+                            fr: 'Mangez une banane mûre.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-banana', quantity: { en: '1 piece', es: '1 pieza', fr: '1 pièce' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Aloe Vera Juice', es: 'Jugo de Aloe Vera', fr: 'Jus d\'Aloe Vera' },
+                        description: {
+                            en: 'Reduces acid and inflammation.',
+                            es: 'Reduce el ácido y la inflamación.',
+                            fr: 'Réduit l\'acide et l\'inflammation.'
+                        },
+                        preparation: {
+                            en: 'Drink a small amount of aloe juice.',
+                            es: 'Bebe una pequeña cantidad de jugo de aloe.',
+                            fr: 'Buvez une petite quantité de jus d\'aloe.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-aloe', quantity: { en: '2 tbsp', es: '2 cdas', fr: '2 c. à soupe' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Constipation', es: 'Estreñimiento', fr: 'Constipation' },
+                remedies: [
+                    {
+                        name: { en: 'Oatmeal & Honey', es: 'Avena y Miel', fr: 'Avoine et Miel' },
+                        description: {
+                            en: 'High fiber content aids bowel movements.',
+                            es: 'Alto contenido de fibra ayuda a los movimientos intestinales.',
+                            fr: 'La teneur élevée en fibres aide le transit intestinal.'
+                        },
+                        preparation: {
+                            en: 'Cook oats with water and sweeten with honey.',
+                            es: 'Cocina avena con agua y endulza con miel.',
+                            fr: 'Cuire l\'avoine avec de l\'eau et sucrer avec du miel.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-oat', quantity: { en: '1 cup', es: '1 taza', fr: '1 tasse' } },
+                            { ingredientId: 'ing-honey', quantity: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Olive Oil Shot', es: 'Trago de Aceite de Oliva', fr: 'Shot d\'Huile d\'Olive' },
+                        description: {
+                            en: 'Lubricates the digestive system.',
+                            es: 'Lubrica el sistema digestivo.',
+                            fr: 'Lubrifie le système digestif.'
+                        },
+                        preparation: {
+                            en: 'Take one tablespoon on an empty stomach.',
+                            es: 'Toma una cucharada con el estómago vacío.',
+                            fr: 'Prenez une cuillère à soupe à jeun.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-olive-oil', quantity: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' } }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -916,6 +1238,118 @@ export const bodyPartsData = [
                         },
                         ingredients: [
                             { ingredientId: 'ing-coconut-oil', quantity: { en: 'As needed', es: 'Según necesario', fr: 'Au besoin' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Acne', es: 'Acné', fr: 'Acné' },
+                remedies: [
+                    {
+                        name: { en: 'Honey & Cinnamon', es: 'Miel y Canela', fr: 'Miel et Cannelle' },
+                        description: {
+                            en: 'Antibacterial mask for acne.',
+                            es: 'Mascarilla antibacteriana para el acné.',
+                            fr: 'Masque antibactérien pour l\'acné.'
+                        },
+                        preparation: {
+                            en: 'Mix honey and cinnamon. Apply to spots.',
+                            es: 'Mezcla miel y canela. Aplica en los puntos.',
+                            fr: 'Mélangez le miel et la cannelle. Appliquez sur les boutons.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-honey', quantity: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' } },
+                            { ingredientId: 'ing-cinnamon', quantity: { en: '1/2 tsp', es: '1/2 cdita', fr: '1/2 c. à café' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Garlic Spot Treatment', es: 'Ajo para Granos', fr: 'Ail pour Boutons' },
+                        description: {
+                            en: 'Kills acne-causing bacteria.',
+                            es: 'Mata bacterias causantes del acné.',
+                            fr: 'Tue les bactéries responsables de l\'acné.'
+                        },
+                        preparation: {
+                            en: 'Rub a slice of garlic on pimple.',
+                            es: 'Frota una rodaja de ajo sobre el grano.',
+                            fr: 'Frottez une tranche d\'ail sur le bouton.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-garlic', quantity: { en: '1 slice', es: '1 rodaja', fr: '1 tranche' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Eczema', es: 'Eczema', fr: 'Eczéma' },
+                remedies: [
+                    {
+                        name: { en: 'Oatmeal Bath', es: 'Baño de Avena', fr: 'Bain à l\'Avoine' },
+                        description: {
+                            en: 'Soothes itchy, inflamed skin.',
+                            es: 'Calma la piel inflamada y con picazón.',
+                            fr: 'Apaise la peau irritée et enflammée.'
+                        },
+                        preparation: {
+                            en: 'Add ground oats to warm bath.',
+                            es: 'Añade avena molida al baño tibio.',
+                            fr: 'Ajoutez de l\'avoine moulue au bain tiède.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-oat', quantity: { en: '1 cup', es: '1 taza', fr: '1 tasse' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Olive Oil', es: 'Aceite de Oliva', fr: 'Huile d\'Olive' },
+                        description: {
+                            en: 'Rich moisturizer for dry patches.',
+                            es: 'Hidratante rico para parches secos.',
+                            fr: 'Hydratant riche pour les plaques sèches.'
+                        },
+                        preparation: {
+                            en: 'Apply to affected areas.',
+                            es: 'Aplica en áreas afectadas.',
+                            fr: 'Appliquez sur les zones touchées.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-olive-oil', quantity: { en: 'As needed', es: 'Según necesario', fr: 'Au besoin' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Insect Bites', es: 'Picaduras de Insectos', fr: 'Piqûres d\'Insectes' },
+                remedies: [
+                    {
+                        name: { en: 'Baking Soda Paste', es: 'Pasta de Bicarbonato', fr: 'Pâte de Bicarbonate' },
+                        description: {
+                            en: 'Relieves itching and swelling.',
+                            es: 'Alivia la picazón y la hinchazón.',
+                            fr: 'Soulage les démangeaisons et l\'enflure.'
+                        },
+                        preparation: {
+                            en: 'Mix with water to paste. Apply.',
+                            es: 'Mezcla con agua hasta hacer pasta. Aplica.',
+                            fr: 'Mélangez avec de l\'eau pour faire une pâte. Appliquez.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-baking-soda', quantity: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Lavender Oil', es: 'Aceite de Lavanda', fr: 'Huile de Lavande' },
+                        description: {
+                            en: 'Reduces irritation.',
+                            es: 'Reduce la irritación.',
+                            fr: 'Réduit l\'irritation.'
+                        },
+                        preparation: {
+                            en: 'Apply a drop to the bite.',
+                            es: 'Aplica una gota sobre la picadura.',
+                            fr: 'Appliquez une goutte sur la piqûre.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-lavender', quantity: { en: '1 drop', es: '1 gota', fr: '1 goutte' } }
                         ]
                     }
                 ]
@@ -980,6 +1414,81 @@ export const bodyPartsData = [
                         ]
                     }
                 ]
+            },
+            {
+                name: { en: 'Bronchitis', es: 'Bronquitis', fr: 'Bronchite' },
+                remedies: [
+                    {
+                        name: { en: 'Thyme & Honey', es: 'Tomillo y Miel', fr: 'Thym et Miel' },
+                        description: {
+                            en: 'Soothing expectorant tea.',
+                            es: 'Té expectorante calmante.',
+                            fr: 'Thé expectorant apaisant.'
+                        },
+                        preparation: {
+                            en: 'Brew thyme tea and add honey. Drink warm.',
+                            es: 'Prepara té de tomillo y añade miel. Bebe tibio.',
+                            fr: 'Infusez du thé au thym et ajoutez du miel. Buvez chaud.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-thyme', quantity: { en: '1 tsp', es: '1 cdita', fr: '1 c. à café' } },
+                            { ingredientId: 'ing-honey', quantity: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Eucalyptus Steam', es: 'Vapor de Eucalipto', fr: 'Vapeur d\'Eucalyptus' },
+                        description: {
+                            en: 'Deeply clears bronchial tubes.',
+                            es: 'Despeja profundamente los bronquios.',
+                            fr: 'Dégage profondément les bronches.'
+                        },
+                        preparation: {
+                            en: 'Inhale steam from eucalyptus boiled water.',
+                            es: 'Inhala vapor de agua hervida con eucalipto.',
+                            fr: 'Inhaler la vapeur d\'eau bouillie avec de l\'eucalyptus.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-eucalyptus', quantity: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Chest Congestion', es: 'Congestión de Pecho', fr: 'Congestion Thoracique' },
+                remedies: [
+                    {
+                        name: { en: 'Ginger Compress', es: 'Compresa de Jengibre', fr: 'Compresse de Gingembre' },
+                        description: {
+                            en: 'Warming effect loosens mucus.',
+                            es: 'Efecto calorífico afloja la mucosidad.',
+                            fr: 'Effet réchauffant détache le mucus.'
+                        },
+                        preparation: {
+                            en: 'Soak cloth in strong ginger tea. Apply to chest.',
+                            es: 'Remoja un paño en té fuerte de jengibre. Aplica en el pecho.',
+                            fr: 'Trempez un chiffon dans du thé au gingembre fort. Appliquez sur la poitrine.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-ginger', quantity: { en: '2 tbsp fresh', es: '2 cdas fresco', fr: '2 c. à soupe frais' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Peppermint Steam', es: 'Vapor de Menta', fr: 'Vapeur de Menthe' },
+                        description: {
+                            en: 'Menthol clears airways.',
+                            es: 'El mentol despeja las vías respiratorias.',
+                            fr: 'Le menthol dégage les voies respiratoires.'
+                        },
+                        preparation: {
+                            en: 'Inhale steam from peppermint tea.',
+                            es: 'Inhala vapor de té de menta.',
+                            fr: 'Inhaler la vapeur de thé à la menthe.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-peppermint', quantity: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' } }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -1002,6 +1511,101 @@ export const bodyPartsData = [
                             en: 'Place chilled cucumber slices on closed eyes for 10 mins.',
                             es: 'Coloca rodajas de pepino frías sobre los ojos cerrados por 10 mins.',
                             fr: 'Placez des tranches de concombre réfrigérées sur les yeux fermés pendant 10 min.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-cucumber', quantity: { en: '2 slices', es: '2 rodajas', fr: '2 tranches' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Puffy Eyes', es: 'Ojos Hinchados', fr: 'Yeux Bouffis' },
+                remedies: [
+                    {
+                        name: { en: 'Chamomile Compress', es: 'Compresa de Manzanilla', fr: 'Compresse de Camomille' },
+                        description: {
+                            en: 'Anti-inflammatory and cooling.',
+                            es: 'Antiinflamatorio y refrescante.',
+                            fr: 'Anti-inflammatoire et rafraîchissant.'
+                        },
+                        preparation: {
+                            en: 'Chill used chamomile tea bags. Place on eyes.',
+                            es: 'Enfría bolsitas de té de manzanilla usadas. Coloca sobre los ojos.',
+                            fr: 'Refroidir les sachets de thé à la camomille utilisés. Placez sur les yeux.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-chamomile', quantity: { en: '2 bags', es: '2 bolsitas', fr: '2 sachets' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Salt Water Compress', es: 'Compresa de Agua Salada', fr: 'Compresse d\'Eau Salée' },
+                        description: {
+                            en: 'Draws out excess fluid.',
+                            es: 'Extrae el exceso de líquido.',
+                            fr: 'Aspire l\'excès de liquide.'
+                        },
+                        preparation: {
+                            en: 'Dissolve salt in ice water. Soak pads and apply.',
+                            es: 'Disuelve sal en agua helada. Remoja almohadillas y aplica.',
+                            fr: 'Dissoudre le sel dans l\'eau glacée. Trempez les tampons et appliquez.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-salt', quantity: { en: '1 tsp', es: '1 cdita', fr: '1 c. à café' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Eye Strain', es: 'Fatiga Visual', fr: 'Fatigue Oculaire' },
+                remedies: [
+                    {
+                        name: { en: 'Fennel Wash', es: 'Lavado de Hinojo', fr: 'Lavage au Fenouil' },
+                        description: {
+                            en: 'Traditional eyewash for strain.',
+                            es: 'Lavado ocular tradicional para la fatiga.',
+                            fr: 'Lavage oculaire traditionnel pour la fatigue.'
+                        },
+                        preparation: {
+                            en: 'Steep fennel seeds, strain thoroughly, cool. Rinse.',
+                            es: 'Infusiona semillas de hinojo, cuela bien, enfría. Enjuaga.',
+                            fr: 'Infusez les graines de fenouil, filtrez bien, refroidissez. Rincez.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-fennel', quantity: { en: '1 tsp', es: '1 cdita', fr: '1 c. à café' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Dark Circles', es: 'Ojeras', fr: 'Cernes' },
+                remedies: [
+                    {
+                        name: { en: 'Coconut Oil Massage', es: 'Masaje de Aceite de Coco', fr: 'Massage à l\'Huile de Coco' },
+                        description: {
+                            en: 'Hydrates delicate skin.',
+                            es: 'Hidrata la piel delicada.',
+                            fr: 'Hydrate la peau délicate.'
+                        },
+                        preparation: {
+                            en: 'Gently massage oil under eyes.',
+                            es: 'Masajea suavemente aceite debajo de los ojos.',
+                            fr: 'Massez doucement l\'huile sous les yeux.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-coconut-oil', quantity: { en: '1 drop', es: '1 gota', fr: '1 goutte' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Cucumber Juice', es: 'Jugo de Pepino', fr: 'Jus de Concombre' },
+                        description: {
+                            en: 'Lightens and refreshes skin.',
+                            es: 'Aclara y refresca la piel.',
+                            fr: 'Éclaircit et rafraîchit la peau.'
+                        },
+                        preparation: {
+                            en: 'Apply cucumber juice with cotton pad.',
+                            es: 'Aplica jugo de pepino con algodón.',
+                            fr: 'Appliquez le jus de concombre avec un coton.'
                         },
                         ingredients: [
                             { ingredientId: 'ing-cucumber', quantity: { en: '2 slices', es: '2 rodajas', fr: '2 tranches' } }
@@ -1086,6 +1690,81 @@ export const bodyPartsData = [
                         ]
                     }
                 ]
+            },
+            {
+                name: { en: 'Muscle Tension', es: 'Tensión Muscular', fr: 'Tension Musculaire' },
+                remedies: [
+                    {
+                        name: { en: 'Valerian Infusion', es: 'Infusión de Valeriana', fr: 'Infusion de Valériane' },
+                        description: {
+                            en: 'Relaxes tight muscles from within.',
+                            es: 'Relaja músculos tensos desde adentro.',
+                            fr: 'Détend les muscles tendus de l\'intérieur.'
+                        },
+                        preparation: {
+                            en: 'Drink valerian tea before relaxing.',
+                            es: 'Bebe té de valeriana antes de relajarte.',
+                            fr: 'Buvez du thé à la valériane avant de vous détendre.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-valerian', quantity: { en: '1 cup', es: '1 taza', fr: '1 tasse' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Warm Epsom Soak', es: 'Remojo en Sales de Epsom', fr: 'Trampage au Sel d\'Epsom' },
+                        description: {
+                            en: 'Relieves soreness.',
+                            es: 'Alivia el dolor.',
+                            fr: 'Soulage la douleur.'
+                        },
+                        preparation: {
+                            en: 'Soak towel in warm epsom water. Apply to back.',
+                            es: 'Remoja toalla en agua tibia con epsom. Aplica en la espalda.',
+                            fr: 'Trempez une serviette dans l\'eau epsom tiède. Appliquez sur le dos.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-epsom-salt', quantity: { en: '1/2 cup', es: '1/2 taza', fr: '1/2 tasse' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Sciatica', es: 'Ciática', fr: 'Sciatique' },
+                remedies: [
+                    {
+                        name: { en: 'Turmeric Milk', es: 'Leche de Cúrcuma', fr: 'Lait au Curcuma' },
+                        description: {
+                            en: 'Reduces nerve inflammation.',
+                            es: 'Reduce la inflamación nerviosa.',
+                            fr: 'Réduit l\'inflammation nerveuse.'
+                        },
+                        preparation: {
+                            en: 'Mix turmeric powder in warm milk (or water). Drink.',
+                            es: 'Mezcla cúrcuma en leche tibia (o agua). Bebe.',
+                            fr: 'Mélangez la poudre de curcuma dans du lait tiède (ou de l\'eau). Buvez.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-turmeric', quantity: { en: '1 tsp', es: '1 cdita', fr: '1 c. à café' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Eucalyptus Oil Rub', es: 'Frotación de Eucalipto', fr: 'Frottement à l\'Eucalyptus' },
+                        description: {
+                            en: 'Cools and relieves nerve pain.',
+                            es: 'Enfría y alivia el dolor nervioso.',
+                            fr: 'Refroidit et soulage la douleur nerveuse.'
+                        },
+                        preparation: {
+                            en: 'Gently rub oil on affected area.',
+                            es: 'Frota suavemente aceite en el área afectada.',
+                            fr: 'Frottez doucement l\'huile sur la zone affectée.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-eucalyptus', quantity: { en: '2 drops', es: '2 gotas', fr: '2 gouttes' } },
+                            { ingredientId: 'ing-olive-oil', quantity: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' } }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -1111,6 +1790,103 @@ export const bodyPartsData = [
                         },
                         ingredients: [
                             { ingredientId: 'ing-banana', quantity: { en: '1 piece', es: '1 pieza', fr: '1 pièce' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Varicose Veins', es: 'Venas Varicosas', fr: 'Varices' },
+                remedies: [
+                    {
+                        name: { en: 'ACV Compress', es: 'Compresa de Vinagre', fr: 'Compresse de Vinaigre' },
+                        description: {
+                            en: 'Improves circulation.',
+                            es: 'Mejora la circulación.',
+                            fr: 'Améliore la circulation.'
+                        },
+                        preparation: {
+                            en: 'Apply cloth soaked in ACV to veins.',
+                            es: 'Aplica paño empapado en vinagre sobre las venas.',
+                            fr: 'Appliquez un chiffon imbibé de vinaigre sur les veines.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-acv', quantity: { en: '1/2 cup', es: '1/2 taza', fr: '1/2 tasse' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Garlic Oil Massage', es: 'Masaje de Aceite de Ajo', fr: 'Massage à l\'Huile d\'Ail' },
+                        description: {
+                            en: 'Stimulates blood flow.',
+                            es: 'Estimula el flujo sanguíneo.',
+                            fr: 'Stimule la circulation sanguine.'
+                        },
+                        preparation: {
+                            en: 'Mix crushed garlic with oil. Massage lightly.',
+                            es: 'Mezcla ajo machacado con aceite. Masajea ligeramente.',
+                            fr: 'Mélangez l\'ail écrasé avec de l\'huile. Massez légèrement.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-garlic', quantity: { en: '2 cloves', es: '2 dientes', fr: '2 gousses' } },
+                            { ingredientId: 'ing-olive-oil', quantity: { en: '2 tbsp', es: '2 cdas', fr: '2 c. à soupe' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Swelling (Edema)', es: 'Hinchazón (Edema)', fr: 'Gonflement (Œdème)' },
+                remedies: [
+                    {
+                        name: { en: 'Cucumber Water', es: 'Agua de Pepino', fr: 'Eau de Concombre' },
+                        description: {
+                            en: 'Natural diuretic to reduce fluid retention.',
+                            es: 'Diurético natural para reducir retención de líquidos.',
+                            fr: 'Diurétique naturel pour réduire la rétention d\'eau.'
+                        },
+                        preparation: {
+                            en: 'Drink water infused with cucumber slices.',
+                            es: 'Bebe agua infusionada con rodajas de pepino.',
+                            fr: 'Buvez de l\'eau infusée de tranches de concombre.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-cucumber', quantity: { en: '1/2 cucumber', es: '1/2 pepino', fr: '1/2 concombre' } }
+                        ]
+                    },
+                    {
+                        name: { en: 'Epsom Foot Bath', es: 'Baño de Pies Epsom', fr: 'Bain de Pieds Epsom' },
+                        description: {
+                            en: 'Draws out fluid and relaxes.',
+                            es: 'Extrae líquido y relaja.',
+                            fr: 'Aspire le liquide et détend.'
+                        },
+                        preparation: {
+                            en: 'Soak feet in warm epsom water for 15 mins.',
+                            es: 'Remoja pies en agua tibia con epsom por 15 mins.',
+                            fr: 'Trempez les pieds dans l\'eau epsom tiède pendant 15 min.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-epsom-salt', quantity: { en: '1 cup', es: '1 taza', fr: '1 tasse' } }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: { en: 'Restless Leg Syndrome', es: 'Síndrome de Piernas Inquietas', fr: 'Syndrome des Jambes Sans Repos' },
+                remedies: [
+                    {
+                        name: { en: 'Lavender Massage', es: 'Masaje de Lavanda', fr: 'Massage à la Lavande' },
+                        description: {
+                            en: 'Calms nerve activity.',
+                            es: 'Calma la actividad nerviosa.',
+                            fr: 'Calme l\'activité nerveuse.'
+                        },
+                        preparation: {
+                            en: 'Massage legs with lavender oil before bed.',
+                            es: 'Masajea las piernas con aceite de lavanda antes de dormir.',
+                            fr: 'Massez les jambes avec de l\'huile de lavande avant de dormir.'
+                        },
+                        ingredients: [
+                            { ingredientId: 'ing-lavender', quantity: { en: '5 drops', es: '5 gotas', fr: '5 gouttes' } },
+                            { ingredientId: 'ing-olive-oil', quantity: { en: '1 tbsp', es: '1 cda', fr: '1 c. à soupe' } }
                         ]
                     }
                 ]
