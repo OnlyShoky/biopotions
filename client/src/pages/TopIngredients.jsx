@@ -96,7 +96,6 @@ const TopIngredients = () => {
                         className="bg-pastel-light/50 border border-pastel-mint/30 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pastel-green/50 flex-grow sm:flex-grow-0"
                     >
                         <option value="versatility">{t.versatility_desc}</option>
-                        <option value="name">{t.name_asc}</option>
                         <option value="safety">{t.safety_asc}</option>
                     </select>
                 </div>

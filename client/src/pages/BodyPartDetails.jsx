@@ -50,8 +50,8 @@ const BodyPartDetails = () => {
             </Link>
 
             <div className="flex flex-col md:flex-row gap-8 items-start mb-12">
-                <div className="w-full md:w-1/3 aspect-square bg-white rounded-3xl p-8 border border-pastel-mint/30 shadow-sm flex items-center justify-center">
-                    <img src={bodyPart.image} alt={bodyPart.bodyPart[language]} className="w-full h-full object-contain" />
+                <div className="w-full md:w-1/3 aspect-square bg-white rounded-3xl border border-pastel-mint/30 shadow-sm flex items-center justify-center overflow-hidden">
+                    <img src={bodyPart.image} alt={bodyPart.bodyPart[language]} className="w-full h-full object-cover object-center scale-125" />
                 </div>
 
                 <div className="flex-1">

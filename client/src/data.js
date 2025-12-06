@@ -87,7 +87,7 @@ export const ingredientsData = [
         sources: [
             { type: 'science', source: 'Cardiovascular benefits of garlic', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC139960/' },
             { type: 'history', source: 'Used in Ancient Egypt for strength', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3249897/' },
-            { type: 'bible', source: 'Numbers 11:5' }
+            { type: 'bible', source: 'Numbers 11:5', url: 'https://www.bible.com/bible/114/NUM.11.5' }
         ]
     },
     {
@@ -159,7 +159,7 @@ export const ingredientsData = [
         commonUses: ['Burns', 'Skin Irritation', 'Wounds'],
         tags: ['science', 'bible', 'history'],
         sources: [
-            { type: 'bible', source: 'John 19:39' },
+            { type: 'bible', source: 'John 19:39', url: 'https://www.bible.com/bible/114/JHN.19.39' },
             { type: 'science', source: 'Aloe vera in dermatology', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2763764/' },
             { type: 'history', source: 'Known as "plant of immortality" in Egypt' }
         ]
@@ -233,7 +233,7 @@ export const ingredientsData = [
         commonUses: ['Sore Throat', 'Wounds', 'Nasal Congestion'],
         tags: ['bible', 'science', 'history'],
         sources: [
-            { type: 'bible', source: 'Matthew 5:13 (Metaphorical)', url: 'https://www.biblegateway.com/passage/?search=Matthew+5%3A13&version=KJV' },
+            { type: 'bible', source: 'Matthew 5:13 (Metaphorical)', url: 'https://www.bible.com/bible/114/MAT.5.13' },
             { type: 'science', source: 'Saline irrigation for rhinosinusitis', url: 'https://pubmed.ncbi.nlm.nih.gov/22769666/' },
             { type: 'history', source: 'Used for food preservation and health globally' }
         ]
@@ -306,7 +306,7 @@ export const ingredientsData = [
         commonUses: ['Diabetes', 'Infections', 'Digestion'],
         tags: ['science', 'bible', 'history'],
         sources: [
-            { type: 'bible', source: 'Exodus 30:23' },
+            { type: 'bible', source: 'Exodus 30:23', url: 'https://www.bible.com/bible/114/EXO.30.23' },
             { type: 'science', source: 'Cinnamon and blood glucose', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4466762/' },
             { type: 'history', source: 'Highly prized in ancient trade routes' }
         ]
@@ -355,7 +355,7 @@ export const ingredientsData = [
         commonUses: ['Puffy Eyes', 'Sunburn', 'Hydration'],
         tags: ['science', 'history', 'bible'],
         sources: [
-            { type: 'bible', source: 'Numbers 11:5' },
+            { type: 'bible', source: 'Numbers 11:5', url: 'https://www.bible.com/bible/114/NUM.11.5' },
             { type: 'science', source: 'Phytochemical analysis', url: 'https://pubmed.ncbi.nlm.nih.gov/23098877/' },
             { type: 'history', source: 'Cultivated in India for over 3000 years' }
         ]
@@ -381,7 +381,7 @@ export const ingredientsData = [
         tags: ['quran', 'bible', 'science', 'history'],
         sources: [
             { type: 'quran', source: 'Surah An-Nur 24:35', url: 'https://quran.com/24/35' },
-            { type: 'bible', source: 'Deuteronomy 8:8' },
+            { type: 'bible', source: 'Deuteronomy 8:8', url: 'https://www.bible.com/bible/114/DEU.8.8' },
             { type: 'science', source: 'Olive oil and skin health', url: 'https://pubmed.ncbi.nlm.nih.gov/19167997/' },
             { type: 'history', source: 'Symbol of peace and health since antiquity' }
         ]
@@ -550,7 +550,7 @@ export const ingredientsData = [
         commonUses: ['Cough', 'Colds', 'Infections'],
         tags: ['science', 'bible', 'quran', 'history'],
         sources: [
-            { type: 'bible', source: 'Numbers 11:5' },
+            { type: 'bible', source: 'Numbers 11:5', url: 'https://www.bible.com/bible/114/NUM.11.5' },
             { type: 'quran', source: 'Surah Al-Baqarah 2:61', url: 'https://quran.com/2/61' },
             { type: 'science', source: 'Anti-inflammatory effects of onion', url: 'https://pubmed.ncbi.nlm.nih.gov/19223126/' }
         ]
