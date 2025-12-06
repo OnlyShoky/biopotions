@@ -34,7 +34,19 @@ export const translations = {
         all_categories: "All Categories",
         name_asc: "Name (A-Z)",
         versatility_desc: "Versatility (High-Low)",
-        safety_asc: "Safety (1-5)"
+        safety_asc: "Safety (1-5)",
+        // Categories
+        cat_food: "Food",
+        cat_herb: "Herb",
+        cat_spice: "Spice",
+        cat_liquid: "Liquid",
+        cat_oil: "Oil",
+        cat_fruit: "Fruit",
+        cat_seed: "Seed",
+        // Search Types
+        type_body_part: "Body Part",
+        type_ailment: "Ailment",
+        type_ingredient: "Ingredient"
     },
     es: {
         app_name: "Biopotions",
@@ -71,7 +83,19 @@ export const translations = {
         all_categories: "Todas las Categorías",
         name_asc: "Nombre (A-Z)",
         versatility_desc: "Versatilidad (Alto-Bajo)",
-        safety_asc: "Seguridad (1-5)"
+        safety_asc: "Seguridad (1-5)",
+        // Categories
+        cat_food: "Alimento",
+        cat_herb: "Hierba",
+        cat_spice: "Especia",
+        cat_liquid: "Líquido",
+        cat_oil: "Aceite",
+        cat_fruit: "Fruta",
+        cat_seed: "Semilla",
+        // Search Types
+        type_body_part: "Parte del Cuerpo",
+        type_ailment: "Dolencia",
+        type_ingredient: "Ingrediente"
     },
     fr: {
         app_name: "Biopotions",
@@ -108,6 +132,18 @@ export const translations = {
         all_categories: "Toutes Catégories",
         name_asc: "Nom (A-Z)",
         versatility_desc: "Polyvalence (Haut-Bas)",
-        safety_asc: "Sécurité (1-5)"
+        safety_asc: "Sécurité (1-5)",
+        // Categories
+        cat_food: "Nourriture",
+        cat_herb: "Herbe",
+        cat_spice: "Épice",
+        cat_liquid: "Liquide",
+        cat_oil: "Huile",
+        cat_fruit: "Fruit",
+        cat_seed: "Graine",
+        // Search Types
+        type_body_part: "Partie du Corps",
+        type_ailment: "Affection",
+        type_ingredient: "Ingrédient"
     }
 };

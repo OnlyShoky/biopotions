@@ -80,7 +80,9 @@ const TopIngredients = () => {
                     >
                         <option value="all">{t.all_categories}</option>
                         {categories.filter(c => c !== 'all').map(cat => (
-                            <option key={cat} value={cat}>{cat}</option>
+                            <option key={cat} value={cat}>
+                                {t[`cat_${cat}`] || cat}
+                            </option>
                         ))}
                     </select>
                 </div>
@@ -122,7 +124,7 @@ const TopIngredients = () => {
                                     {ingredient.name[language]}
                                 </h3>
                                 <span className="text-xs font-medium text-pastel-text/60 uppercase tracking-wider">
-                                    {ingredient.category}
+                                    {t[`cat_${ingredient.category}`] || ingredient.category}
                                 </span>
                             </div>
 

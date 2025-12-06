@@ -6,7 +6,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
 
 const SearchBar = () => {
-    const { data: bodyParts } = useDataFetcher();
+    const { data: bodyParts, ingredients } = useDataFetcher();
     const [query, setQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -23,17 +23,31 @@ const SearchBar = () => {
 
             // Filter data
             let matches = [];
-            bodyParts.forEach(bp => {
-                // Search in the current language
-                if (bp.bodyPart[language].toLowerCase().includes(query.toLowerCase())) {
-                    matches.push({ type: 'Body Part', name: bp.bodyPart[language], link: `/bodypart/${bp.bodyPart.en}` });
-                }
-                bp.ailments?.forEach(a => {
-                    if (a.name[language].toLowerCase().includes(query.toLowerCase())) {
-                        matches.push({ type: 'Ailment', name: a.name[language], link: `/ailment/${a.name.en}` });
+
+            // Search Body Parts and Ailments
+            if (bodyParts) {
+                bodyParts.forEach(bp => {
+                    // Search in the current language
+                    if (bp.bodyPart[language].toLowerCase().includes(query.toLowerCase())) {
+                        matches.push({ type: t.type_body_part, name: bp.bodyPart[language], link: `/bodypart/${bp.bodyPart.en}` });
+                    }
+                    bp.ailments?.forEach(a => {
+                        if (a.name[language].toLowerCase().includes(query.toLowerCase())) {
+                            matches.push({ type: t.type_ailment, name: a.name[language], link: `/ailment/${a.name.en}` });
+                        }
+                    });
+                });
+            }
+
+            // Search Ingredients
+            if (ingredients) {
+                ingredients.forEach(ing => {
+                    if (ing.name[language].toLowerCase().includes(query.toLowerCase())) {
+                        matches.push({ type: t.type_ingredient, name: ing.name[language], link: `/ingredient/${ing._id}` });
                     }
                 });
-            });
+            }
+
             setSuggestions(matches.slice(0, 5));
         };
 
@@ -42,7 +56,7 @@ const SearchBar = () => {
         }, 300);
 
         return () => clearTimeout(timeoutId);
-    }, [query, language, bodyParts]);
+    }, [query, language, bodyParts, ingredients]);
 
     const handleSearch = (e) => {
         e.preventDefault();
